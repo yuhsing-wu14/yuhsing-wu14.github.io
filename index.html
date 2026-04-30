@@ -514,16 +514,28 @@
         </h3>
 
         <p>
-          Developed a human-centered interface concept for a hospital length-of-stay
-          prediction tool. The project focused on making predictive model outputs easier
-          to understand and more useful in clinical decision-making contexts.
+          Designed a human-centered decision-support prototype for predicting hospital
+          length-of-stay categories using an interpretable machine learning workflow. Rather
+          than focusing only on predictive accuracy, the project prioritized usability, low
+          cognitive load, clear explanations, and quick interpretation for users such as care
+          coordinators, clinicians, and hospital staff.
         </p>
 
         <p>
-          Connected human factors principles to current interface progress across five
-          design goals: reducing cognitive load, improving interpretability, supporting
-          workflow integration, building trust, and maintaining a user-centered design
-          focus.
+          Built a Gradio-based interactive interface that allows users to enter a small set
+          of patient and admission-related features, including age, severity of illness,
+          type of admission, visitors with patient, and bed grade. The system outputs a
+          predicted stay category and confidence score, using categorical results to make
+          predictions easier to interpret in real-world healthcare settings.
+        </p>
+        
+        <p>
+          Compared Decision Tree and Random Forest models using accuracy, precision, recall,
+          and ROC-AUC, then selected Random Forest for the final prototype because it offered
+          slightly stronger precision and ROC-AUC while still supporting interpretability
+          through feature importance. Visualizations such as length-of-stay distribution,
+          visitor count patterns, and feature importance were added to help users understand
+          the prediction and build trust in the system.
         </p>
 
         <span class="tag">Healthcare AI</span>
