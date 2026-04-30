@@ -6,89 +6,222 @@
 
   <title>Yuhsing Wu | UX Research & Human Factors Portfolio</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --dark: #0f172a;
+      --text: #1f2937;
+      --muted: #64748b;
+      --blue: #168ed8;
+      --light-blue: #e0f2fe;
+      --cream: #fbfaf7;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #1f2937;
-      background-color: #f8fafc;
+      font-family: "Arima", system-ui, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--cream);
     }
 
-    header {
-      background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
-      padding: 80px 20px;
-      text-align: center;
+    .top-nav {
+      background-color: #101114;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.12);
     }
 
-    header h1 {
-      font-size: 44px;
-      margin: 0;
-      color: #0f172a;
+    .nav-brand {
+      color: white;
+      font-size: 23px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
-    header p {
-      font-size: 18px;
-      max-width: 850px;
-      margin: 18px auto 0;
+    .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.4px;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      min-height: 78vh;
+      padding: 85px 8% 75px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 60px;
+      align-items: center;
+      background:
+        radial-gradient(circle at top left, rgba(22, 142, 216, 0.12), transparent 34%),
+        linear-gradient(135deg, #ffffff 0%, #f5fbff 55%, #eef8ff 100%);
+    }
+
+    .hero-text {
+      text-align: left;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.08;
+      margin: 0 0 22px;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
       color: #334155;
+      margin-bottom: 0;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
-      margin-top: 24px;
-      padding: 12px 20px;
-      background-color: #2563eb;
+      padding: 12px 22px;
+      background-color: var(--blue);
       color: white;
       text-decoration: none;
       border-radius: 999px;
-      font-weight: bold;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(22, 142, 216, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
     .button:hover {
-      background-color: #1d4ed8;
+      background-color: #0f7fc5;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(22, 142, 216, 0.32);
     }
 
-    nav {
+    .button.secondary {
       background-color: white;
-      padding: 16px;
-      text-align: center;
-      border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      color: var(--dark);
+      border: 1px solid var(--border);
+      box-shadow: none;
     }
 
-    nav a {
-      margin: 0 14px;
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: 600;
+    .button.secondary:hover {
+      background-color: #f8fafc;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image::before {
+      content: "";
+      position: absolute;
+      width: 82%;
+      height: 88%;
+      border-radius: 32px;
+      background: repeating-linear-gradient(
+        90deg,
+        #111827 0,
+        #111827 42px,
+        #168ed8 43px,
+        #168ed8 46px
+      );
+      transform: rotate(-2deg);
+      z-index: 0;
+      opacity: 0.95;
+    }
+
+    .hero-image img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 380px;
+      height: 460px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border-radius: 32px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
+      border: 6px solid white;
     }
 
     section {
-      max-width: 980px;
-      margin: 45px auto;
-      padding: 0 20px;
+      max-width: 1080px;
+      margin: 70px auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      font-size: 15px;
+      margin-bottom: 6px;
     }
 
     h2 {
-      color: #0f172a;
-      border-bottom: 2px solid #dbeafe;
-      padding-bottom: 8px;
+      color: var(--dark);
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 24px;
     }
 
     .card {
-      background: white;
-      padding: 24px;
-      margin: 20px 0;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      background: var(--card);
+      padding: 28px;
+      margin: 22px 0;
+      border-radius: 22px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+      border: 1px solid rgba(226, 232, 240, 0.8);
     }
 
     .card h3 {
       margin-top: 0;
       color: #1e3a8a;
+      font-size: 24px;
+      line-height: 1.25;
     }
 
     .card h3 a {
@@ -97,85 +230,175 @@
     }
 
     .card h3 a:hover {
-      text-decoration: underline;
+      color: var(--blue);
+    }
+
+    .project-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.11);
     }
 
     .tag {
       display: inline-block;
-      background-color: #e0f2fe;
+      background-color: var(--light-blue);
       color: #075985;
-      padding: 5px 10px;
+      padding: 6px 12px;
       border-radius: 999px;
-      font-size: 13px;
-      margin: 4px 4px 4px 0;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 5px 5px 5px 0;
     }
 
     .project-link {
       display: inline-block;
-      margin-top: 14px;
-      font-weight: bold;
+      margin-top: 18px;
+      font-weight: 700;
       text-decoration: none;
-      color: #2563eb;
+      color: var(--blue);
     }
 
     .project-link:hover {
       text-decoration: underline;
     }
 
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
     }
 
     .skill-box {
       background: white;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      padding: 24px;
+      border-radius: 22px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+      border: 1px solid rgba(226, 232, 240, 0.8);
     }
 
     .skill-box h3 {
       margin-top: 0;
       color: #1e3a8a;
+      font-size: 21px;
+    }
+
+    .contact-card a {
+      font-weight: 600;
     }
 
     footer {
       text-align: center;
-      padding: 30px 20px;
-      background-color: #0f172a;
+      padding: 34px 20px;
+      background-color: #101114;
       color: white;
-      margin-top: 50px;
+      margin-top: 70px;
     }
 
     a {
-      color: #2563eb;
+      color: var(--blue);
+    }
+
+    @media (max-width: 850px) {
+      .top-nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 20px;
+      }
+
+      .nav-links {
+        text-align: center;
+      }
+
+      .nav-links a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 24px;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image img {
+        height: 390px;
+        max-width: 320px;
+      }
+
+      section {
+        margin: 55px auto;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Yuhsing Wu</h1>
+  <nav class="top-nav">
+    <div class="nav-brand">Yuhsing Wu</div>
 
-    <p>
-      Hi, I’m Yuhsing Wu — a Master’s student in Health Technology with a concentration
-      in Human-Computer Interaction at the University of Illinois Urbana-Champaign.
-      I have experience in UX research and design, human factors, and digital health technology.
-    </p>
-
-    <a class="button" href="resume.pdf" target="_blank">View Resume</a>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
+    </div>
   </nav>
 
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">UX Research • Human Factors • Digital Health</p>
+
+      <h1>Hello, I’m Yuhsing.</h1>
+
+      <p>
+        I’m a Master’s student in Health Technology with a concentration in
+        Human-Computer Interaction at the University of Illinois Urbana-Champaign.
+        I have experience in UX research and design, human factors, and digital
+        health technology.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="button" href="resume.pdf" target="_blank">View Resume</a>
+        <a class="button secondary" href="#projects">View Projects</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="profile.JPG" alt="Photo of Yuhsing Wu" />
+    </div>
+  </header>
+
   <section id="about">
-    <h2>About</h2>
+    <p class="section-label">About</p>
+    <h2>Designing technology around real people, workflows, and needs.</h2>
 
     <div class="card">
       <p>
@@ -213,191 +436,195 @@
   </section>
 
   <section id="projects">
-    <h2>Selected Projects</h2>
+    <p class="section-label">Selected Work</p>
+    <h2>Projects</h2>
 
-    <div class="card">
-      <h3>
-        <a href="#" target="_blank">Smartphone Gait & Motion Analysis App</a>
-      </h3>
+    <div class="projects-grid">
+      <div class="card project-card">
+        <h3>
+          <a href="#" target="_blank">Smartphone Gait & Motion Analysis App</a>
+        </h3>
 
-      <p>
-        Designed a smartphone-based gait and motion analysis app to support accessible
-        mobility assessment outside traditional lab environments. The project focuses on
-        user-centered instruction design, walking test setup, sensor and camera-based
-        data collection, and usability considerations for non-expert users completing
-        gait assessments independently.
-      </p>
+        <p>
+          Designed a smartphone-based gait and motion analysis app to support accessible
+          mobility assessment outside traditional lab environments. The project focuses on
+          user-centered instruction design, walking test setup, sensor and camera-based
+          data collection, and usability considerations for non-expert users completing
+          gait assessments independently.
+        </p>
 
-      <span class="tag">UX Research</span>
-      <span class="tag">Human Factors</span>
-      <span class="tag">Digital Health</span>
-      <span class="tag">Mobile App Design</span>
-      <span class="tag">React Native</span>
+        <span class="tag">UX Research</span>
+        <span class="tag">Human Factors</span>
+        <span class="tag">Digital Health</span>
+        <span class="tag">Mobile App Design</span>
+        <span class="tag">React Native</span>
 
-      <br />
-      <a class="project-link" href="#" target="_blank">View Project →</a>
-    </div>
+        <br />
+        <a class="project-link" href="#" target="_blank">View Project →</a>
+      </div>
 
-    <div class="card">
-      <h3>
-        <a href="https://drive.google.com/drive/folders/1y8uxPSfWWGKjzSO1gRNKALWXQDH8Vx08?usp=drive_link" target="_blank">
-          MindfulMeals — mHealth App for Cooking Support, Safety, and Independence
+      <div class="card project-card">
+        <h3>
+          <a href="https://drive.google.com/drive/folders/1y8uxPSfWWGKjzSO1gRNKALWXQDH8Vx08?usp=drive_link" target="_blank">
+            MindfulMeals — mHealth App for Cooking Support, Safety, and Independence
+          </a>
+        </h3>
+
+        <p>
+          Designed MindfulMeals, a human-centered mobile health app concept to support
+          adults experiencing early cognitive changes in completing cooking tasks more
+          safely and independently. The project focused on reducing cognitive load during
+          everyday meal preparation while supporting organization, sequencing, safety,
+          and social connection.
+        </p>
+
+        <p>
+          Applied a structured human factors and user-centered design process including
+          literature review, subject matter expert feedback, user needs identification,
+          personas, journey mapping, ideation, and low- to mid-fidelity prototyping.
+          Core features included a guided cooking flow, grocery list support, chatbot
+          assistance, safety check prompts, and a community meal-sharing feature.
+        </p>
+
+        <p>
+          Presented this work at the HFES Health Care Symposium as part of the Student
+          mHealth App Competition Finals. The concept was developed to address pain points
+          in instrumental activities of daily living by emphasizing accessible design,
+          independence, and kitchen safety for adults with mild cognitive impairment or
+          early cognitive changes.
+        </p>
+
+        <span class="tag">UI/UX Design</span>
+        <span class="tag">Human-Centered Design</span>
+        <span class="tag">Aging</span>
+        <span class="tag">Task Support</span>
+        <span class="tag">mHealth</span>
+
+        <br />
+        <a class="project-link" href="https://drive.google.com/drive/folders/1y8uxPSfWWGKjzSO1gRNKALWXQDH8Vx08?usp=drive_link" target="_blank">
+          View Project →
         </a>
-      </h3>
+      </div>
 
-      <p>
-        Designed MindfulMeals, a human-centered mobile health app concept to support
-        adults experiencing early cognitive changes in completing cooking tasks more
-        safely and independently. The project focused on reducing cognitive load during
-        everyday meal preparation while supporting organization, sequencing, safety,
-        and social connection.
-      </p>
+      <div class="card project-card">
+        <h3>
+          <a href="https://huggingface.co/spaces/purupatel20/hospital-los-predictor" target="_blank">
+            Human-Centered Tool for Predicting Hospital Length of Stay
+          </a>
+        </h3>
 
-      <p>
-        Applied a structured human factors and user-centered design process including
-        literature review, subject matter expert feedback, user needs identification,
-        personas, journey mapping, ideation, and low- to mid-fidelity prototyping.
-        Core features included a guided cooking flow, grocery list support, chatbot
-        assistance, safety check prompts, and a community meal-sharing feature.
-      </p>
+        <p>
+          Developed a human-centered interface concept for a hospital length-of-stay
+          prediction tool. The project focused on making predictive model outputs easier
+          to understand and more useful in clinical decision-making contexts.
+        </p>
 
-      <p>
-        Presented this work at the HFES Health Care Symposium as part of the Student
-        mHealth App Competition Finals. The concept was developed to address pain points
-        in instrumental activities of daily living by emphasizing accessible design,
-        independence, and kitchen safety for adults with mild cognitive impairment or
-        early cognitive changes.
-      </p>
+        <p>
+          Connected human factors principles to current interface progress across five
+          design goals: reducing cognitive load, improving interpretability, supporting
+          workflow integration, building trust, and maintaining a user-centered design
+          focus.
+        </p>
 
-      <span class="tag">UI/UX Design</span>
-      <span class="tag">Human-Centered Design</span>
-      <span class="tag">Aging</span>
-      <span class="tag">Task Support</span>
-      <span class="tag">mHealth</span>
+        <span class="tag">Healthcare AI</span>
+        <span class="tag">Interpretability</span>
+        <span class="tag">Workflow Integration</span>
+        <span class="tag">Human Factors</span>
+        <span class="tag">UX Design</span>
 
-      <br />
-      <a class="project-link" href="https://drive.google.com/drive/folders/1y8uxPSfWWGKjzSO1gRNKALWXQDH8Vx08?usp=drive_link" target="_blank">
-        View Project →
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>
-        <a href="https://huggingface.co/spaces/purupatel20/hospital-los-predictor" target="_blank">
-          Human-Centered Tool for Predicting Hospital Length of Stay
+        <br />
+        <a class="project-link" href="https://huggingface.co/spaces/purupatel20/hospital-los-predictor" target="_blank">
+          View Project →
         </a>
-      </h3>
+      </div>
 
-      <p>
-        Developed a human-centered interface concept for a hospital length-of-stay
-        prediction tool. The project focused on making predictive model outputs easier
-        to understand and more useful in clinical decision-making contexts.
-      </p>
+      <div class="card project-card">
+        <h3>
+          <a href="https://docs.google.com/presentation/d/1cWEdksOxe3SGDjHDihstjA8KgcpefycsgWCVav529Jo/edit?usp=drive_link" target="_blank">
+            Smart Sensor Insole for Sit-to-Stand Rehabilitation
+          </a>
+        </h3>
 
-      <p>
-        Connected human factors principles to current interface progress across five
-        design goals: reducing cognitive load, improving interpretability, supporting
-        workflow integration, building trust, and maintaining a user-centered design
-        focus.
-      </p>
+        <p>
+          Designed and prototyped a low-cost smart sensor insole to support quantitative
+          sit-to-stand assessment and real-time feedback in physical therapy and
+          rehabilitation settings.
+        </p>
 
-      <span class="tag">Healthcare AI</span>
-      <span class="tag">Interpretability</span>
-      <span class="tag">Workflow Integration</span>
-      <span class="tag">Human Factors</span>
-      <span class="tag">UX Design</span>
+        <p>
+          Conducted background and market research on fall risk, hospital readmissions,
+          and existing gait and pressure-platform technologies to identify gaps in
+          affordability, accessibility, and real-time feedback.
+        </p>
 
-      <br />
-      <a class="project-link" href="https://huggingface.co/spaces/purupatel20/hospital-los-predictor" target="_blank">
-        View Project →
-      </a>
-    </div>
+        <p>
+          Designed and built a hardware prototype using force-sensitive resistors,
+          Arduino, and embedded LEDs to capture plantar force distribution during
+          sit-to-stand tasks. Applied human factors principles to optimize sensor and
+          hardware placement, minimize discomfort, preserve natural gait, and improve
+          user acceptance and compliance.
+        </p>
 
-    <div class="card">
-      <h3>
-        <a href="https://docs.google.com/presentation/d/1cWEdksOxe3SGDjHDihstjA8KgcpefycsgWCVav529Jo/edit?usp=drive_link" target="_blank">
-          Smart Sensor Insole for Sit-to-Stand Rehabilitation
+        <p>
+          Evaluated prototype performance through iterative testing and refinement while
+          balancing biomechanical validity, usability, and cost constraints.
+        </p>
+
+        <span class="tag">Human Factors Engineering</span>
+        <span class="tag">Hardware Prototyping</span>
+        <span class="tag">Rehabilitation</span>
+        <span class="tag">Arduino</span>
+        <span class="tag">Usability</span>
+
+        <br />
+        <a class="project-link" href="https://docs.google.com/presentation/d/1cWEdksOxe3SGDjHDihstjA8KgcpefycsgWCVav529Jo/edit?usp=drive_link" target="_blank">
+          View Project →
         </a>
-      </h3>
+      </div>
 
-      <p>
-        Designed and prototyped a low-cost smart sensor insole to support quantitative
-        sit-to-stand assessment and real-time feedback in physical therapy and
-        rehabilitation settings.
-      </p>
+      <div class="card project-card">
+        <h3>
+          <a href="https://drive.google.com/drive/folders/1ziiGn56xDb32055kl_AaQIV-SXICgI8Y?usp=drive_link" target="_blank">
+            Withings BPM Connect — Human Factors Evaluation
+          </a>
+        </h3>
 
-      <p>
-        Conducted background and market research on fall risk, hospital readmissions,
-        and existing gait and pressure-platform technologies to identify gaps in
-        affordability, accessibility, and real-time feedback.
-      </p>
+        <p>
+          Conducted a comprehensive human factors evaluation of the Withings BPM Connect
+          blood pressure monitor through comparative analysis, task analysis, and heuristic
+          evaluation. The project examined usability, user workflow, potential use errors,
+          cognitive load, and safety considerations for connected health monitoring devices.
+        </p>
 
-      <p>
-        Designed and built a hardware prototype using force-sensitive resistors,
-        Arduino, and embedded LEDs to capture plantar force distribution during
-        sit-to-stand tasks. Applied human factors principles to optimize sensor and
-        hardware placement, minimize discomfort, preserve natural gait, and improve
-        user acceptance and compliance.
-      </p>
+        <p>
+          Reviewed competing FDA-cleared devices, including Garmin, iHealth, and Omron,
+          to compare usability, features, and reported issues. Created hierarchical task
+          analyses and PCA tables for key user workflows such as pairing, measurement,
+          and report generation.
+        </p>
 
-      <p>
-        Evaluated prototype performance through iterative testing and refinement while
-        balancing biomechanical validity, usability, and cost constraints.
-      </p>
+        <p>
+          Assessed the companion app using Nielsen’s usability heuristics and identified
+          opportunities to improve feedback clarity, system status visibility, error
+          prevention, and overall user experience.
+        </p>
 
-      <span class="tag">Human Factors Engineering</span>
-      <span class="tag">Hardware Prototyping</span>
-      <span class="tag">Rehabilitation</span>
-      <span class="tag">Arduino</span>
-      <span class="tag">Usability</span>
+        <span class="tag">Usability Testing</span>
+        <span class="tag">Task Analysis</span>
+        <span class="tag">Heuristic Evaluation</span>
+        <span class="tag">Medical Device</span>
+        <span class="tag">Human Factors</span>
 
-      <br />
-      <a class="project-link" href="https://docs.google.com/presentation/d/1cWEdksOxe3SGDjHDihstjA8KgcpefycsgWCVav529Jo/edit?usp=drive_link" target="_blank">
-        View Project →
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>
-        <a href="https://drive.google.com/drive/folders/1ziiGn56xDb32055kl_AaQIV-SXICgI8Y?usp=drive_link" target="_blank">
-          Withings BPM Connect — Human Factors Evaluation
+        <br />
+        <a class="project-link" href="https://drive.google.com/drive/folders/1ziiGn56xDb32055kl_AaQIV-SXICgI8Y?usp=drive_link" target="_blank">
+          View Project →
         </a>
-      </h3>
-
-      <p>
-        Conducted a comprehensive human factors evaluation of the Withings BPM Connect
-        blood pressure monitor through comparative analysis, task analysis, and heuristic
-        evaluation. The project examined usability, user workflow, potential use errors,
-        cognitive load, and safety considerations for connected health monitoring devices.
-      </p>
-
-      <p>
-        Reviewed competing FDA-cleared devices, including Garmin, iHealth, and Omron,
-        to compare usability, features, and reported issues. Created hierarchical task
-        analyses and PCA tables for key user workflows such as pairing, measurement,
-        and report generation.
-      </p>
-
-      <p>
-        Assessed the companion app using Nielsen’s usability heuristics and identified
-        opportunities to improve feedback clarity, system status visibility, error
-        prevention, and overall user experience.
-      </p>
-
-      <span class="tag">Usability Testing</span>
-      <span class="tag">Task Analysis</span>
-      <span class="tag">Heuristic Evaluation</span>
-      <span class="tag">Medical Device</span>
-      <span class="tag">Human Factors</span>
-
-      <br />
-      <a class="project-link" href="https://drive.google.com/drive/folders/1ziiGn56xDb32055kl_AaQIV-SXICgI8Y?usp=drive_link" target="_blank">
-        View Project →
-      </a>
+      </div>
     </div>
   </section>
 
   <section id="skills">
+    <p class="section-label">Capabilities</p>
     <h2>Skills</h2>
 
     <div class="skills-grid">
@@ -435,26 +662,29 @@
   </section>
 
   <section id="contact">
-  <h2>Contact</h2>
+    <p class="section-label">Contact</p>
+    <h2>Let’s connect</h2>
 
-  <div class="card">
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:yuhsing14@gmail.com">yuhsing14@gmail.com</a>
-    </p>
+    <div class="card contact-card">
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:yuhsing14@gmail.com">yuhsing14@gmail.com</a>
+      </p>
 
-    <p>
-      <strong>LinkedIn:</strong>
-      <a href="https://www.linkedin.com/in/yuhsing-wu/" target="_blank">linkedin.com/in/yuhsing-wu</a>
-    </p>
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/yuhsing-wu/" target="_blank">linkedin.com/in/yuhsing-wu</a>
+      </p>
 
-    <p>
-      <strong>GitHub:</strong>
-      <a href="https://github.com/yuhsing-wu14" target="_blank">github.com/yuhsing-wu14</a>
-    </p>
-  </div>
-</section>
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/yuhsing-wu14" target="_blank">github.com/yuhsing-wu14</a>
+      </p>
+    </div>
+  </section>
 
+  <footer>
+    <p>© 2026 Yuhsing Wu.</p>
   </footer>
 </body>
 </html>
