@@ -1,1 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuhsing Wu | UX Research & Human Factors Portfolio</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background-color: #f8fafc;
+    }
+
+    header {
+      background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 44px;
+      margin: 0;
+      color: #0f172a;
+    }
+
+    header p {
+      font-size: 18px;
+      max-width: 820px;
+      margin: 18px auto 0;
+      color: #334155;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 20px;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #1d4ed8;
+    }
+
+    nav {
+      background-color: white;
+      padding: 16px;
+      text-align: center;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    section {
+      max-width: 980px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #0f172a;
+      border-bottom: 2px solid #dbeafe;
+      padding-bottom: 8px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      margin: 20px 0;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: #075985;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin: 4px 4px 4px 0;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-box {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    }
+
+    .skill-box h3 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #0f172a;
+      color: white;
+      margin-top: 50px;
+    }
+
+    a {
+      color: #2563eb;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Yuhsing Wu</h1>
+    <p>
+      Hi, I’m Yuhsing Wu — a Master’s student in Health Technology with a concentration
+      in Human-Computer Interaction at the University of Illinois Urbana-Champaign.
+      I have experience in UX research and design, human factors, and digital health technology.
+    </p>
+    <a class="button" href="resume.pdf" target="_blank">View Resume</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+
+    <div class="card">
+      <p>
+        Hi there, my name is Yuhsing Wu. I am currently a Master’s student in Health
+        Technology with a concentration in Human-Computer Interaction at the University
+        of Illinois Urbana-Champaign. I also hold a Bachelor’s degree in Kinesiology
+        from The University of Texas at Austin.
+      </p>
+
+      <p>
+        My interest in UX research and design grew from my experience volunteering in
+        a hospital, where I had to learn complex internal systems for user profiles,
+        patient-related information, and workflow tasks. I noticed how confusing these
+        systems could feel, especially for someone new to the environment. This
+        experience helped me realize how important usable design is in fast-paced
+        healthcare settings, where clinicians and staff need systems that support their
+        workflow rather than slow them down. It shaped my interest in designing tools
+        that reduce confusion, improve efficiency, and better support real user needs.
+      </p>
+
+      <p>
+        My background combines human factors, ergonomics, and UX research, with a strong
+        interest in human-centered design. I am especially interested in understanding
+        how people interact with technology and how thoughtful design can improve
+        usability, accessibility, and overall user experience.
+      </p>
+
+      <p>
+        I am currently seeking full-time opportunities in UX research, UX design, and
+        human factors engineering, where I can contribute to the design, testing, and
+        improvement of user-centered products, digital health tools, medical devices,
+        and other technologies that support real-world user needs.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Selected Projects</h2>
+
+    <div class="card">
+      <h3>Smartphone Gait & Motion Analysis App</h3>
+      <p>
+        Designed and developed a digital health prototype for gait and motion analysis
+        using smartphone-based sensors and camera-supported data collection. This project
+        focuses on making gait assessment more accessible outside of traditional lab
+        environments while improving instruction clarity, user flow, and usability for
+        non-expert users.
+      </p>
+      <span class="tag">UX Research</span>
+      <span class="tag">Human Factors</span>
+      <span class="tag">Digital Health</span>
+      <span class="tag">Mobile App Design</span>
+      <span class="tag">React Native</span>
+    </div>
+
+    <div class="card">
+      <h3>MindfulMeals / BrainBuddy mHealth App Concept</h3>
+      <p>
+        Designed an aging-friendly cooking assistance app concept to support independent
+        daily living. The project used human-centered design methods to reduce cognitive
+        load, improve task guidance, and support safer completion of multi-step cooking
+        activities.
+      </p>
+      <span class="tag">UI/UX Design</span>
+      <span class="tag">Human-Centered Design</span>
+      <span class="tag">Aging</span>
+      <span class="tag">Task Support</span>
+      <span class="tag">mHealth</span>
+    </div>
+
+    <div class="card">
+      <h3>Human-Centered Tool for Predicting Hospital Length of Stay</h3>
+      <p>
+        Developed and evaluated a human-centered interface concept for a hospital length
+        of stay prediction tool. The project focused on making model outputs more
+        interpretable, reducing cognitive load, supporting workflow integration, and
+        building user trust in healthcare decision-support tools.
+      </p>
+      <span class="tag">Healthcare AI</span>
+      <span class="tag">Interpretability</span>
+      <span class="tag">Workflow Integration</span>
+      <span class="tag">Human Factors</span>
+      <span class="tag">UX Design</span>
+    </div>
+
+    <div class="card">
+      <h3>Withings BPM Connect – Human Factors Evaluation</h3>
+      <p>
+        Conducted a human factors evaluation of the Withings BPM Connect blood pressure
+        monitor, focusing on usability, task flow, potential use errors, and user
+        interaction with the device. The project applied usability testing concepts,
+        task analysis, and heuristic evaluation to identify opportunities for improving
+        clarity, safety, and ease of use.
+      </p>
+      <span class="tag">Usability Testing</span>
+      <span class="tag">Task Analysis</span>
+      <span class="tag">Heuristic Evaluation</span>
+      <span class="tag">Medical Device</span>
+      <span class="tag">Human Factors</span>
+    </div>
+
+    <div class="card">
+      <h3>Effect of Insoles on Postural Stability</h3>
+      <p>
+        Conducted a biomechanics and human factors study examining how orthotic inserts
+        may affect postural stability during squat tasks. The project used force plate
+        and motion capture data to evaluate balance, movement, and stability-related
+        outcomes.
+      </p>
+      <span class="tag">Human Factors</span>
+      <span class="tag">Ergonomics</span>
+      <span class="tag">Motion Capture</span>
+      <span class="tag">Force Plate</span>
+      <span class="tag">Data Analysis</span>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-box">
+        <h3>UX Research & Design</h3>
+        <p>
+          Usability Testing, User Research, Mixed-Methods Research, Survey Design,
+          Heuristic Evaluation, A/B Testing, Human-Centered Design, Wireframing,
+          Interaction Prototyping
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Design Tools</h3>
+        <p>
+          Figma, Adobe XD
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Data & Analysis</h3>
+        <p>
+          Microsoft Excel, Python, MATLAB, RStudio, SQL, Regression, ANOVA, T-tests
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Healthcare & Human Factors</h3>
+        <p>
+          Human Subjects Research, Health Data Privacy, Human Factors, Ergonomics,
+          Digital Health, Medical Device Evaluation
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <div class="card">
+      <p>
+        <strong>Email:</strong> your-email@example.com
+      </p>
+
+      <p>
+        <strong>LinkedIn:</strong> <a href="#" target="_blank">Add your LinkedIn link here</a>
+      </p>
+
+      <p>
+        <strong>GitHub:</strong> <a href="https://github.com/yuhsing-wu14" target="_blank">github.com/yuhsing-wu14</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Yuhsing Wu. Portfolio website hosted with GitHub Pages.</p>
+  </footer>
+</body>
+</html>
