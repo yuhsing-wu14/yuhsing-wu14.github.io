@@ -355,9 +355,28 @@
         justify-content: center;
       }
 
-      .hero-image img {
-        height: 390px;
-        max-width: 320px;
+      .hero-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+
+      .profile-photo {
+        position: relative;
+        z-index: 1;
+      }
+
+      .corner-bow {
+        position: absolute;
+        width: 95px;
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      .bow-top-right {
+        top: -18px;
+        right: 18px;
+        transform: rotate(18deg);
       }
 
       section {
@@ -410,7 +429,8 @@
     </div>
 
     <div class="hero-image">
-      <img src="profile.JPG" alt="Photo of Yuhsing Wu" />
+      <img src="profile.JPG" alt="Photo of Yuhsing Wu" class="profile-photo" />
+      <img src="bow.png" alt="" class="corner-bow bow-top-right" />
     </div>
   </header>
 
