@@ -141,25 +141,7 @@ body {
   justify-content: center;
 }
 
-.hero-image::before {
-  content: "";
-  position: absolute;
-  width: 82%;
-  height: 88%;
-  border-radius: 32px;
-  background: repeating-linear-gradient(
-    90deg,
-    #111827 0,
-    #111827 42px,
-    #168ed8 43px,
-    #168ed8 46px
-  );
-  transform: rotate(-2deg);
-  z-index: 0;
-  opacity: 0.95;
-}
-
-.hero-image img {
+.profile-photo {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -169,7 +151,7 @@ body {
   object-position: center top;
   display: block;
   border-radius: 32px;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
   border: 6px solid white;
 }
 
