@@ -307,9 +307,9 @@ a {
 }
 
 .hf-button {
-  font-size: 17px;
-  padding: 14px 28px;
-  min-width: 320px;
+  font-size: 20px;
+  padding: 20px 40px;
+  min-width: 420px;
   text-align: center;
 }
 
