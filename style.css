@@ -306,6 +306,13 @@ a {
   margin: 0;
 }
 
+.hf-button {
+  font-size: 17px;
+  padding: 14px 28px;
+  min-width: 320px;
+  text-align: center;
+}
+
 .hf-projects-section {
   max-width: 1080px;
   margin: 40px auto 90px;
