@@ -504,8 +504,9 @@ mark {
   .project-header h2 {
     font-size: 28px;
   }
+}
 
-  /* ===== Hospital LOS Project Page ===== */
+/* ===== Hospital LOS Project Images ===== */
 
 .project-image-grid {
   display: grid;
@@ -549,6 +550,4 @@ mark {
   .project-image-grid .wide-image {
     grid-column: auto;
   }
-}
-  
 }
