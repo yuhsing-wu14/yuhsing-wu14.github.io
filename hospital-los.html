@@ -3,237 +3,247 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital Length of Stay Predictor | Yu-Hsing Wu</title>
+  <title>Human-Centered Tool for Predicting Hospital Length of Stay | Yuhsing Wu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="index.html" class="logo">Yu-Hsing Wu</a>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Yuhsing Wu</a>
       <div class="nav-links">
-        <a href="index.html">Work</a>
         <a href="about.html">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="resume.pdf" target="_blank">Resume</a>
       </div>
     </nav>
   </header>
 
-  <main class="project-page">
+  <main class="project-detail">
+    <a href="index.html#projects" class="back-link">← Back to Projects</a>
 
-    <section class="project-hero">
-      <p class="project-label">Health Technology · Machine Learning · Human Factors</p>
+    <section class="project-detail-hero">
+      <p class="eyebrow">HEALTH TECHNOLOGY · MACHINE LEARNING · HUMAN FACTORS</p>
+
       <h1>Human-Centered Tool for Predicting Hospital Length of Stay</h1>
-      <p class="project-intro">
+
+      <p class="project-detail-intro">
         A human-centered machine learning dashboard designed to help users predict hospital length of stay
-        through interpretable outputs, confidence scores, and simple visual explanations.
+        through <strong>interpretable outputs, confidence scores, and simple visual explanations.</strong>
       </p>
+    </section>
 
-      <div class="project-meta">
+    <section class="project-detail-card">
+      <div class="project-detail-card-header">
         <div>
-          <h3>Timeline</h3>
-          <p>March 2026 – May 2026</p>
+          <p class="eyebrow">DECISION-SUPPORT DASHBOARD</p>
+          <h2>Making Hospital LOS Prediction More Interpretable</h2>
         </div>
-        <div>
-          <h3>Team</h3>
-          <p>Team NumPynd · HT 504 Final Project</p>
-        </div>
-        <div>
-          <h3>Role</h3>
-          <p>Evaluation / Analysis</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="project-section">
-      <h2>Overview</h2>
-      <p>
-        Hospital length of stay impacts <strong>patient outcomes, discharge planning, hospital capacity,
-        staffing, and cost</strong>. However, many prediction tools are difficult to interpret or are not designed
-        around real clinical workflow needs.
-      </p>
-      <p>
-        This project focused on building a prototype that balanced <strong>machine learning, usability,
-        interpretability, and human-centered design</strong>. Instead of only showing a prediction, the tool
-        helped users understand the predicted stay category, model confidence, and key factors influencing
-        the result.
-      </p>
-    </section>
-
-    <section class="project-section">
-      <h2>Skills</h2>
-      <p>
-        <strong>Machine Learning</strong>, Human Factors Engineering, Health Technology, Python, Streamlit,
-        Gradio, scikit-learn, Data Preprocessing, Model Evaluation, Feature Importance, Usability Analysis,
-        Decision-Support Design
-      </p>
-    </section>
-
-    <section class="project-section">
-      <h2>Problem</h2>
-      <p>
-        Hospitals and care teams often need to estimate how long a patient may stay in the hospital to support
-        <strong>resource planning, discharge coordination, and care management</strong>. Existing LOS prediction
-        tools can be model-focused, complex, or difficult for end users to interpret quickly.
-      </p>
-      <p>
-        The design challenge was not only to build a predictive model, but to create a tool that could answer:
-        <strong>What is the predicted length-of-stay category?</strong> How confident is the model?
-        What factors contributed to the prediction? And how can this information be reviewed quickly without
-        increasing cognitive burden?
-      </p>
-    </section>
-
-    <section class="project-section">
-      <h2>Users / Stakeholders</h2>
-      <p>
-        The tool was designed for potential healthcare stakeholders such as <strong>clinicians, care teams,
-        hospital administrators, care coordinators, and hospital staff</strong>. These users need quick and
-        interpretable information to support planning, rather than complex model outputs.
-      </p>
-      <p>
-        The prototype was designed as a <strong>proof-of-concept decision-support tool</strong>, not a clinically
-        validated system or replacement for clinical judgment.
-      </p>
-    </section>
-
-    <section class="project-section">
-      <h2>Research & Design Methods</h2>
-      <p>
-        The project used the AV Healthcare Analytics II dataset and framed length of stay as a
-        <strong>classification problem</strong>. Instead of predicting an exact number of days, the model predicted
-        a stay category, which made the output easier to interpret in a healthcare decision-making context.
-      </p>
-      <p>
-        The team cleaned and encoded the dataset, selected interpretable patient and admission-related features,
-        and compared <strong>Decision Tree and Random Forest models</strong> using accuracy, precision, recall,
-        and ROC-AUC. The final prototype used a Random Forest model because it provided slightly stronger
-        evaluation performance while still supporting feature-importance explanations.
-      </p>
-    </section>
-
-    <section class="project-section">
-      <h2>Process</h2>
-      <p>
-        The project began with identifying the core prediction workflow:
-        <strong>input → prediction → explanation</strong>. A small set of interpretable features was selected,
-        including age, severity of illness, type of admission, visitors with patient, and bed grade.
-      </p>
-      <p>
-        The prototype evolved through multiple stages, starting from a low-fidelity sketch, moving into an
-        early interactive prototype, and ending with a more refined dashboard. Each stage focused on improving
-        <strong>clarity, interpretability, and reduced cognitive load</strong>.
-      </p>
-    </section>
-
-    <section class="project-section">
-      <h2>Prototype Development</h2>
-      <p>
-        The prototype evolved through <strong>multiple stages of design and refinement</strong>, beginning with
-        a rough sketch, followed by a midpoint interactive prototype, and culminating in a more polished final
-        dashboard.
-      </p>
-      <p>
-        The rough sketch established the initial information hierarchy, including patient inputs, prediction
-        results, top contributing factors, and supporting charts. The midpoint prototype introduced the first
-        functional workflow. The final prototype refined the layout and presentation to better support
-        <strong>explanation, confidence, and usability</strong>.
-      </p>
-
-      <div class="prototype-gallery">
-        <figure class="prototype-card">
-          <img src="los-rough-sketch.png" alt="Rough sketch of hospital length of stay predictor dashboard" />
-          <figcaption>
-            <strong>Rough Sketch.</strong> Early concept sketch showing the planned layout for patient inputs,
-            prediction output, top contributing factors, and supporting visualizations.
-          </figcaption>
-        </figure>
-
-        <figure class="prototype-card">
-          <img src="los-midpoint-prototype.png" alt="Midpoint prototype of hospital length of stay predictor" />
-          <figcaption>
-            <strong>Midpoint Prototype.</strong> Early interactive prototype showing the first functional version
-            of the LOS prediction tool, including input controls, prediction results, confidence output, and a
-            distribution chart.
-          </figcaption>
-        </figure>
-
-        <figure class="prototype-card prototype-card-wide">
-          <img src="los-final-prototype.png" alt="Final hospital length of stay predictor dashboard prototype" />
-          <figcaption>
-            <strong>Final Prototype.</strong> Refined dashboard showing sidebar patient inputs, LOS category
-            prediction, confidence score, top important features, and human-centered design elements.
-          </figcaption>
-        </figure>
+        <p class="project-date">March 2026 – May 2026</p>
       </div>
 
-      <div class="project-button-row">
-        <a class="project-button" href="https://huggingface.co/spaces/purupatel20/HospitalLOSPredictor" target="_blank">
-          View Updated Prototype
-        </a>
+      <div class="tag-row">
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Human Factors</span>
+        <span class="tag">Health Technology</span>
+        <span class="tag">Python</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">Model Evaluation</span>
       </div>
 
-      <p class="project-note">
-        Prototype hosted externally on Hugging Face Spaces by a project teammate. Screenshots are included here
-        to preserve the design process and final interface.
-      </p>
-    </section>
+      <section>
+        <h3>Intro</h3>
+        <p>
+          Hospital length of stay impacts <strong>patient outcomes, discharge planning, hospital capacity,
+          staffing, and cost.</strong> However, many prediction tools are difficult to interpret or are not
+          designed around real clinical workflow needs.
+        </p>
 
-    <section class="project-section">
-      <h2>Key Features / Outcome / Impact</h2>
-      <p>
-        The final prototype included a patient input form, LOS category prediction, confidence score, top
-        important features table, feature importance chart, and supporting LOS visualizations.
-      </p>
-      <p>
-        The main impact of the project was demonstrating how a machine learning workflow can be translated into
-        a more <strong>human-centered decision-support dashboard</strong>. The design connected prediction output
-        with explanation and visual context, rather than presenting a model result alone.
-      </p>
-    </section>
+        <p>
+          This project focused on building a prototype that balanced <strong>machine learning, usability,
+          interpretability, and human-centered design.</strong> Instead of only showing a prediction, the tool
+          helped users understand the predicted stay category, model confidence, and key factors influencing
+          the result.
+        </p>
+      </section>
 
-    <section class="project-section">
-      <h2>My Role</h2>
-      <p>
-        As part of the Hospital Length of Stay project team, I contributed to the project through
-        <strong>model evaluation, validation testing, results analysis, and presentation development</strong>.
-        My work focused on comparing Decision Tree and Random Forest performance, documenting evaluation metrics,
-        testing sample patient inputs, and identifying model limitations and edge cases.
-      </p>
-    </section>
+      <section>
+        <h3>Skills</h3>
+        <p>
+          <strong>Machine Learning</strong>, Human Factors Engineering, Health Technology, Python, Streamlit,
+          Gradio, scikit-learn, Data Preprocessing, Model Evaluation, Feature Importance, Usability Analysis,
+          Decision-Support Design
+        </p>
+      </section>
 
-    <section class="project-section">
-      <h2>Reflection / Next Steps</h2>
-      <p>
-        This project showed how predictive modeling can be made more usable through <strong>clear information
-        hierarchy, confidence communication, and feature-level explanations</strong>. The strongest part of the
-        project was not only generating a prediction, but also helping users understand the uncertainty and key
-        factors behind the result.
-      </p>
-      <p>
-        Future improvements could include adding more clinically meaningful features, improving model tuning,
-        conducting usability testing with healthcare stakeholders, adding clearer chart captions, improving
-        accessibility, and exploring more advanced explainability methods after validating the basic workflow.
-      </p>
-    </section>
+      <section>
+        <h3>My Role</h3>
+        <p>
+          As part of the Hospital Length of Stay project team, I contributed through
+          <strong>model evaluation, validation testing, results analysis, and presentation development.</strong>
+          My work focused on comparing Decision Tree and Random Forest performance, documenting evaluation
+          metrics, testing sample patient inputs, and identifying model limitations and edge cases.
+        </p>
+      </section>
 
-    <section class="project-section">
-      <h2>Links</h2>
-      <p>
-        <a href="https://huggingface.co/spaces/purupatel20/hospital-los-predictor" target="_blank">
-          Initial Prototype
-        </a>
-      </p>
-      <p>
-        <a href="https://huggingface.co/spaces/purupatel20/HospitalLOSPredictor" target="_blank">
-          Updated Prototype
-        </a>
-      </p>
-    </section>
+      <section>
+        <h3>Problem</h3>
+        <p>
+          Hospitals and care teams often need to estimate how long a patient may stay in the hospital to support
+          <strong>resource planning, discharge coordination, and care management.</strong> Existing LOS prediction
+          tools can be model-focused, complex, or difficult for end users to interpret quickly.
+        </p>
 
+        <p>
+          The design challenge was not only to build a predictive model, but to create a tool that could answer:
+          <strong>What is the predicted length-of-stay category? How confident is the model? What factors contributed
+          to the prediction?</strong>
+        </p>
+      </section>
+
+      <section>
+        <h3>Users / Stakeholders</h3>
+        <p>
+          The tool was designed for potential healthcare stakeholders such as <strong>clinicians, care teams,
+          hospital administrators, care coordinators, and hospital staff.</strong> These users need quick,
+          interpretable information to support planning, rather than complex model outputs.
+        </p>
+
+        <p>
+          The prototype was designed as a <strong>proof-of-concept decision-support tool</strong>, not a clinically
+          validated system or replacement for clinical judgment.
+        </p>
+      </section>
+
+      <section>
+        <h3>Research & Design Methods</h3>
+        <p>
+          The project used the AV Healthcare Analytics II dataset and framed length of stay as a
+          <strong>classification problem.</strong> Instead of predicting an exact number of days, the model predicted
+          a stay category, which made the output easier to interpret in a healthcare decision-making context.
+        </p>
+
+        <p>
+          The team cleaned and encoded the dataset, selected interpretable patient and admission-related features,
+          and compared <strong>Decision Tree and Random Forest models</strong> using accuracy, precision, recall,
+          and ROC-AUC. The final prototype used a Random Forest model because it provided slightly stronger
+          evaluation performance while still supporting feature-importance explanations.
+        </p>
+      </section>
+
+      <section>
+        <h3>Process</h3>
+        <p>
+          The project followed a simple decision-support workflow:
+          <strong>input → prediction → explanation.</strong> A small set of interpretable features was selected,
+          including age, severity of illness, type of admission, visitors with patient, and bed grade.
+        </p>
+
+        <p>
+          The prototype evolved through multiple stages, starting from a low-fidelity sketch, moving into an
+          early interactive prototype, and ending with a more refined dashboard. Each stage focused on improving
+          <strong>clarity, interpretability, and reduced cognitive load.</strong>
+        </p>
+      </section>
+
+      <section>
+        <h3>Prototype Development</h3>
+        <p>
+          The prototype evolved through <strong>multiple stages of design and refinement</strong>, beginning with
+          a rough sketch, followed by a midpoint interactive prototype, and culminating in a more polished final
+          dashboard.
+        </p>
+
+        <p>
+          The rough sketch established the initial information hierarchy, the midpoint prototype introduced the
+          first functional workflow, and the final prototype refined the layout to better support
+          <strong>explanation, confidence, and usability.</strong>
+        </p>
+
+        <div class="project-image-grid">
+          <figure>
+            <img src="los-rough-sketch.png" alt="Rough sketch of hospital length of stay predictor dashboard">
+            <figcaption>
+              <strong>Rough Sketch.</strong> Early layout concept for patient inputs, prediction output,
+              top factors, and supporting visualizations.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="los-midpoint-prototype.png" alt="Midpoint prototype of hospital length of stay predictor">
+            <figcaption>
+              <strong>Midpoint Prototype.</strong> First functional version with input controls, prediction results,
+              confidence output, and a LOS distribution chart.
+            </figcaption>
+          </figure>
+
+          <figure class="wide-image">
+            <img src="los-final-prototype.png" alt="Final hospital length of stay predictor dashboard prototype">
+            <figcaption>
+              <strong>Final Prototype.</strong> Refined dashboard with sidebar inputs, LOS category prediction,
+              confidence score, top important features, and human-centered design elements.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p>
+          <a class="project-link" href="https://huggingface.co/spaces/purupatel20/HospitalLOSPredictor" target="_blank">
+            View Updated Prototype →
+          </a>
+        </p>
+
+        <p class="project-note">
+          Prototype hosted externally on Hugging Face Spaces by a project teammate. Screenshots are included here
+          to preserve the design process and final interface.
+        </p>
+      </section>
+
+      <section>
+        <h3>Key Findings / Outcome / Impact</h3>
+        <p>
+          The final prototype included a patient input form, LOS category prediction, confidence score, top
+          important features table, feature importance chart, and supporting LOS visualizations.
+        </p>
+
+        <p>
+          The main outcome was a <strong>human-centered decision-support dashboard</strong> that connected model
+          output with explanation and visual context, rather than presenting a prediction alone.
+        </p>
+      </section>
+
+      <section>
+        <h3>Reflection / Next Steps</h3>
+        <p>
+          This project showed how predictive modeling can be made more usable through <strong>clear information
+          hierarchy, confidence communication, and feature-level explanations.</strong> The strongest part of the
+          project was not only generating a prediction, but helping users understand uncertainty and key factors
+          behind the result.
+        </p>
+
+        <p>
+          Future improvements could include adding more clinically meaningful features, improving model tuning,
+          conducting usability testing with healthcare stakeholders, adding clearer chart captions, improving
+          accessibility, and exploring more advanced explainability methods.
+        </p>
+      </section>
+
+      <section>
+        <h3>Links</h3>
+        <p>
+          <a class="project-link" href="https://huggingface.co/spaces/purupatel20/hospital-los-predictor" target="_blank">
+            Initial Prototype →
+          </a>
+        </p>
+        <p>
+          <a class="project-link" href="https://huggingface.co/spaces/purupatel20/HospitalLOSPredictor" target="_blank">
+            Updated Prototype →
+          </a>
+        </p>
+      </section>
+    </section>
   </main>
-
-  <footer class="site-footer">
-    <p>© Yu-Hsing Wu</p>
-  </footer>
 </body>
 </html>
