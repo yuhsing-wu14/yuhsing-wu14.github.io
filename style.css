@@ -415,6 +415,72 @@ mark {
   padding: 0 24px;
 }
 
+/* ===== Hospital LOS Gallery ===== */
+
+#los-gallery {
+  width: 100%;
+  max-width: 100%;
+  margin: 30px 0 42px;
+}
+
+#los-gallery figure {
+  margin: 0;
+}
+
+/* Rough sketches side by side */
+#los-gallery .los-rough-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 28px 0 14px;
+  align-items: start;
+}
+
+#los-gallery .los-rough-card {
+  width: 100%;
+}
+
+#los-gallery .los-rough-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 12px;
+}
+
+/* Midpoint + Final prototypes controlled size */
+#los-gallery .los-single-image {
+  margin-top: 36px;
+}
+
+#los-gallery .los-single-image img {
+  width: 100%;
+  max-width: 100%;
+  height: 430px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 12px;
+}
+
+/* Captions */
+#los-gallery .los-gallery-caption,
+#los-gallery figcaption {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-top: 12px;
+}
+
+/* Mobile */
 @media (max-width: 850px) {
   .top-nav {
     flex-direction: column;
@@ -504,50 +570,13 @@ mark {
   .project-header h2 {
     font-size: 28px;
   }
-}
 
-  /* ===== Hospital LOS Rough Sketch Two-Column Fix ===== */
-  
-  .los-rough-row {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 24px !important;
-    width: 100% !important;
-    margin: 28px 0 14px !important;
-    align-items: start !important;
+  #los-gallery .los-rough-row {
+    grid-template-columns: 1fr;
   }
-  
-  .los-rough-card {
-    margin: 0 !important;
-    width: 100% !important;
+
+  #los-gallery .los-rough-card img,
+  #los-gallery .los-single-image img {
+    height: auto;
   }
-  
-  .los-rough-card img {
-    width: 100% !important;
-    height: 330px !important;
-    object-fit: contain !important;
-    object-position: center !important;
-    display: block !important;
-    background: #ffffff !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 18px !important;
-    padding: 12px !important;
-  }
-  
-  .los-image-caption {
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    margin-top: 12px !important;
-    color: #475569 !important;
-  }
-  
-  @media (max-width: 800px) {
-    .los-rough-row {
-      grid-template-columns: 1fr !important;
-    }
-  
-    .los-rough-card img {
-      height: auto !important;
-    }
-  } 
 }
