@@ -506,112 +506,48 @@ mark {
   }
 }
 
-/* ===== Hospital LOS Project Images ===== */
-
-.project-image-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  margin: 28px 0 36px;
-}
-
-.project-image-grid figure {
-  margin: 0;
-}
-
-.project-image-grid img {
-  width: 100%;
-  border-radius: 18px;
-  border: 1px solid #e5e7eb;
-  display: block;
-}
-
-.project-image-grid figcaption {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-top: 12px;
-  color: #475569;
-}
-
-.project-image-grid .wide-image {
-  grid-column: 1 / -1;
-}
-
-.project-note {
-  font-size: 0.95rem;
-  color: #64748b;
-}
-
-@media (max-width: 800px) {
-  .project-image-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-image-grid .wide-image {
-    grid-column: auto;
-  }
-
-/* ===== Hospital LOS Prototype Image Layout ===== */
-
-.los-process-images {
-  margin: 30px 0 40px;
-}
-
-.los-rough-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 12px;
-}
-
-.los-rough-row figure,
-.los-full-image {
-  margin: 0;
-}
-
-.los-rough-row img,
-.los-full-image img {
-  width: 100%;
-  display: block;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 12px;
-}
-
-.los-rough-row img {
-  height: 360px;
-  object-fit: contain;
-}
-
-.los-full-image {
-  margin-top: 34px;
-}
-
-.los-full-image img {
-  max-height: 520px;
-  object-fit: contain;
-}
-
-.los-image-caption,
-.los-full-image figcaption {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-top: 12px;
-  color: #475569;
-}
-
-@media (max-width: 800px) {
+  /* ===== Hospital LOS Rough Sketch Two-Column Fix ===== */
+  
   .los-rough-row {
-    grid-template-columns: 1fr;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    width: 100% !important;
+    margin: 28px 0 14px !important;
+    align-items: start !important;
   }
-
-  .los-rough-row img {
-    height: auto;
+  
+  .los-rough-card {
+    margin: 0 !important;
+    width: 100% !important;
   }
-
-  .los-full-image img {
-    max-height: none;
+  
+  .los-rough-card img {
+    width: 100% !important;
+    height: 330px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+    background: #ffffff !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 18px !important;
+    padding: 12px !important;
   }
-} 
+  
+  .los-image-caption {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-top: 12px !important;
+    color: #475569 !important;
+  }
+  
+  @media (max-width: 800px) {
+    .los-rough-row {
+      grid-template-columns: 1fr !important;
+    }
+  
+    .los-rough-card img {
+      height: auto !important;
+    }
+  } 
 }
