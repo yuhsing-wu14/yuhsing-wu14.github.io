@@ -835,8 +835,8 @@ mark {
 }
 
 .project-hero-image {
-  max-width: 560px;
   width: 100%;
+  max-width: 100%;
   margin: 10px 0 34px;
   border-radius: 22px;
   overflow: hidden;
