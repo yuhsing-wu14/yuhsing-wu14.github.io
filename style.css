@@ -834,19 +834,22 @@ mark {
   }
 }
 
-.project-hero-image {
-  width: 100%;
-  max-width: 100%;
-  margin: 10px 0 34px;
+/* MindfulMeals image inside white project card */
+.hf-project-card .project-hero-image {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 10px 0 34px !important;
   border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 14px 32px rgba(80, 60, 40, 0.12);
 }
 
-.project-hero-image img {
-  width: 100%;
-  height: auto;
+.hf-project-card .project-hero-image img {
   display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
   border-radius: 22px;
 }
 
