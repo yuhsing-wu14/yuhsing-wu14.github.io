@@ -834,20 +834,21 @@ mark {
   }
 }
 
-.project-hero-image {
-  max-width: 560px;
-  width: 70%;
-  margin: 1.5rem auto 1.5rem;
+.page-hero .project-hero-image {
+  max-width: 420px;
+  width: 100%;
+  margin: 1.4rem 0 1.5rem;
   border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 14px 32px rgba(80, 60, 40, 0.12);
 }
 
-.project-hero-image img {
+.page-hero .project-hero-image img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 22px;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
