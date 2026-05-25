@@ -232,14 +232,11 @@ h2 {
 /* Homepage project image */
 .project-home-image {
   width: 100%;
-  max-width: 860px;
-  height: 330px;
+  max-width: 100%;
+  height: auto;
   display: block;
-  margin: 0.25rem auto 1.6rem;
+  margin: 0.75rem 0 1.75rem;
   border-radius: 18px;
-  object-fit: contain;
-  object-position: center;
-  background: #f8fafc;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
