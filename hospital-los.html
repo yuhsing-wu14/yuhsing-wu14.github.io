@@ -192,7 +192,6 @@
         
         </div>
 
-
         <h3>Key Findings / Outcome / Impact</h3>
         <p>
           The final prototype included a patient input form, LOS category prediction, confidence score, top
@@ -203,6 +202,40 @@
           The main outcome was a <strong>human-centered decision-support dashboard</strong> that connected model
           output with explanation and visual context, rather than presenting a prediction alone.
         </p>
+
+        <p>
+          To support results analysis, the project also included visualizations that explored relationships between
+          admission type, visitor count, and length-of-stay categories. These charts helped connect the model output
+          to interpretable patterns in the dataset and informed the final dashboard explanation structure.
+        </p>
+
+        <div class="los-results-gallery">
+
+          <figure class="los-result-card">
+            <img src="./assets/images/los/los-result 1.png" alt="Length of stay by admission type chart">
+            <figcaption>
+              <strong>LOS by Admission Type.</strong> This visualization compared length-of-stay categories across
+              emergency, trauma, and urgent admissions, helping identify patterns in patient stay distribution.
+            </figcaption>
+          </figure>
+
+          <figure class="los-result-card">
+            <img src="./assets/images/los/los-result 2.png" alt="Visitors with patient by length of stay category chart">
+            <figcaption>
+              <strong>Visitors with Patient by Stay Category.</strong> This chart showed how visitor counts varied
+              across LOS groups, supporting exploration of patient- and admission-related factors.
+            </figcaption>
+          </figure>
+
+          <figure class="los-result-card los-result-wide">
+            <img src="./assets/images/los/los-result 3.png" alt="Top feature importances chart for hospital length of stay model">
+            <figcaption>
+              <strong>Top Feature Importances.</strong> The model highlighted visitors with patient, bed grade,
+              admission type, severity of illness, and age as important factors contributing to LOS prediction.
+            </figcaption>
+          </figure>
+
+        </div>
 
         <h3>Reflection / Next Steps</h3>
         <p>
