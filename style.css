@@ -956,8 +956,8 @@ mark {
 /* ===== MindfulMeals Comparison Table ===== */
 
 .comparison-table-wrap {
-  max-width: 900px;
-  width: 92%;
+  max-width: 760px;
+  width: 86%;
   margin: 34px auto 46px;
   padding: 24px;
   background: #f1f8ff;
@@ -989,7 +989,7 @@ mark {
 
 .comparison-table th,
 .comparison-table td {
-  padding: 14px 16px;
+  padding: 11px 12px;
   border: 1px solid #dbeafe;
   text-align: center;
   vertical-align: middle;
