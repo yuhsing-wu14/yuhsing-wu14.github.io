@@ -904,7 +904,7 @@ mark {
   grid-template-columns: 0.75fr 1.25fr;
   gap: 34px;
   align-items: center;
-  padding: 22px 28px;
+  padding: 14px 28px;
   background: #f1f8ff;
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 24px;
@@ -919,7 +919,7 @@ mark {
 
 .mindful-result-phone img {
   width: 58%;
-  max-width: 190px;
+  max-width: 175px;
   height: auto;
   display: block;
 }
