@@ -904,6 +904,9 @@ mark {
   grid-template-columns: 0.75fr 1.25fr;
   gap: 34px;
   align-items: center;
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
   padding: 14px 28px;
   background: #f1f8ff;
   border: 1px solid rgba(226, 232, 240, 0.9);
