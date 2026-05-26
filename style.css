@@ -895,16 +895,16 @@ mark {
 .mindful-results-showcase {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  margin: 32px 0 48px;
+  gap: 34px;
+  margin: 28px 0 42px;
 }
 
 .mindful-result-row {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 42px;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 34px;
   align-items: center;
-  padding: 28px;
+  padding: 22px 28px;
   background: #f1f8ff;
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 24px;
@@ -918,14 +918,14 @@ mark {
 }
 
 .mindful-result-phone img {
-  width: 72%;
-  max-width: 280px;
+  width: 58%;
+  max-width: 190px;
   height: auto;
   display: block;
 }
 
 .mindful-result-text h4 {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: #0f172a;
   font-size: 25px;
   line-height: 1.25;
@@ -934,22 +934,18 @@ mark {
 .mindful-result-text p {
   margin: 0;
   color: var(--text);
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 @media (max-width: 768px) {
   .mindful-result-row {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 24px;
+    gap: 20px;
+    padding: 22px;
   }
 
   .mindful-result-phone img {
-    width: 70%;
-    max-width: 260px;
-  }
-
-  .mindful-result-text {
-    text-align: left;
+    width: 62%;
+    max-width: 230px;
   }
 }
