@@ -889,3 +889,67 @@ mark {
   line-height: 1.5;
   color: #475569;
 }
+
+/* ===== MindfulMeals Results Showcase ===== */
+
+.mindful-results-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin: 32px 0 48px;
+}
+
+.mindful-result-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 42px;
+  align-items: center;
+  padding: 28px;
+  background: #f1f8ff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+}
+
+.mindful-result-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mindful-result-phone img {
+  width: 72%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+}
+
+.mindful-result-text h4 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.mindful-result-text p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .mindful-result-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .mindful-result-phone img {
+    width: 70%;
+    max-width: 260px;
+  }
+
+  .mindful-result-text {
+    text-align: left;
+  }
+}
