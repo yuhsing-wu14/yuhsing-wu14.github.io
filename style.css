@@ -1251,10 +1251,25 @@ mark {
   color: #334155;
 }
 
-.project-content p .text-link {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  line-height: inherit;
+/* Inline links inside project paragraphs */
+
+.project-content p.intro-link-paragraph {
+  line-height: 1.58;
+}
+
+.paragraph-link {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: inherit !important;
+  color: var(--blue);
   font-weight: 700;
+  text-decoration: none;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.paragraph-link:hover {
+  text-decoration: underline;
 }
