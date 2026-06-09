@@ -1036,154 +1036,70 @@ mark {
   }
 }
 
-/* MindfulMeals process, sketches, and user flow */
+/* MindfulMeals user flow - clearer sequence layout */
 
-.sketch-full-image {
-  margin: 2rem 0 2.5rem;
-  display: flex;
-  justify-content: center;
-}
-
-.sketch-full-image img {
-  width: min(100%, 720px);
-  border-radius: 18px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-}
-
-.sketch-ideation-grid {
-  display: grid;
-  gap: 1.5rem;
-  margin: 2rem 0 3rem;
-}
-
-.sketch-ideation-card {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) 1.2fr;
-  gap: 2rem;
-  align-items: center;
-  padding: 1.5rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 22px;
-  background: #ffffff;
-  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
-}
-
-.sketch-ideation-card img {
-  width: 100%;
-  max-height: 280px;
-  object-fit: contain;
-  border-radius: 16px;
-  background: #fafafa;
-}
-
-.sketch-label {
-  margin-bottom: 0.4rem;
-  color: #2f80ed;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.sketch-ideation-card h4,
-.design-decision-card h4 {
-  margin-bottom: 0.75rem;
-}
-
-.mindful-flow-wrap {
+.mindful-flow-sequence {
   margin: 2rem 0 3rem;
   padding: 2rem;
   display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.9rem;
   border-radius: 24px;
   background: #f8fbff;
   border: 1px solid #dbeafe;
   overflow-x: auto;
 }
 
-.flow-phase {
-  min-width: 230px;
+.flow-sequence-step {
+  min-width: 170px;
   display: grid;
-  gap: 0.8rem;
-  align-content: start;
+  gap: 0.75rem;
   justify-items: center;
   text-align: center;
 }
 
-.flow-phase span {
+.flow-phase-label {
   color: #64748b;
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.flow-step {
+.flow-step-card {
   width: 100%;
-  padding: 0.85rem 1rem;
+  padding: 0.95rem 1rem;
   border-radius: 999px;
   background: #ffffff;
   border: 1px solid #bfdbfe;
   color: #1e3a8a;
   font-weight: 700;
   box-shadow: 0 10px 24px rgba(47, 128, 237, 0.08);
+  white-space: nowrap;
 }
 
-.flow-arrow {
+.flow-sequence-arrow {
   color: #2f80ed;
   font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.flow-arrow-large {
-  align-self: center;
-  padding-top: 1.8rem;
-}
-
-.design-decision-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  margin: 2rem 0 3rem;
-}
-
-.design-decision-card {
-  padding: 1.5rem;
-  border-radius: 22px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
-}
-
-.decision-number {
-  margin-bottom: 0.75rem;
-  color: #2f80ed;
-  font-size: 0.9rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  line-height: 1;
+  padding-top: 1.7rem;
 }
 
 @media (max-width: 850px) {
-  .sketch-ideation-card {
-    grid-template-columns: 1fr;
-  }
-
-  .mindful-flow-wrap {
+  .mindful-flow-sequence {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .flow-arrow-large {
+  .flow-sequence-step {
+    width: 100%;
+  }
+
+  .flow-sequence-arrow {
     padding-top: 0;
+    text-align: center;
     transform: rotate(90deg);
-  }
-
-  .design-decision-grid {
-    grid-template-columns: 1fr;
   }
 }
