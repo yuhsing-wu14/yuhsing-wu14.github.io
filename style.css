@@ -1036,7 +1036,63 @@ mark {
   }
 }
 
-/* MindfulMeals user flow - clearer sequence layout */
+/* MindfulMeals process, sketches, user flow, and design decisions */
+
+.sketch-full-image {
+  margin: 2rem 0 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sketch-full-image img {
+  width: min(100%, 720px);
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.sketch-ideation-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+
+.sketch-ideation-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) 1.2fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+.sketch-ideation-card img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #fafafa;
+}
+
+.sketch-label {
+  margin-bottom: 0.4rem;
+  color: #2f80ed;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sketch-ideation-card h4,
+.design-decision-card h4 {
+  margin-bottom: 0.75rem;
+}
+
+/* New clearer user flow */
 
 .mindful-flow-sequence {
   margin: 2rem 0 3rem;
@@ -1056,6 +1112,7 @@ mark {
   gap: 0.75rem;
   justify-items: center;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .flow-phase-label {
@@ -1085,9 +1142,45 @@ mark {
   font-weight: 800;
   line-height: 1;
   padding-top: 1.7rem;
+  flex-shrink: 0;
+}
+
+/* Design decisions */
+
+.design-decision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0 3rem;
+}
+
+.design-decision-card {
+  padding: 1.5rem;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+.decision-number {
+  margin-bottom: 0.75rem;
+  color: #2f80ed;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.project-links-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 850px) {
+  .sketch-ideation-card {
+    grid-template-columns: 1fr;
+  }
+
   .mindful-flow-sequence {
     flex-direction: column;
     align-items: stretch;
@@ -1101,5 +1194,9 @@ mark {
     padding-top: 0;
     text-align: center;
     transform: rotate(90deg);
+  }
+
+  .design-decision-grid {
+    grid-template-columns: 1fr;
   }
 }
