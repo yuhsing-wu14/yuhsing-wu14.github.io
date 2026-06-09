@@ -1200,3 +1200,53 @@ mark {
     grid-template-columns: 1fr;
   }
 }
+
+/* MindfulMeals links and references */
+
+.project-links-list {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.primary-project-link {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.9rem 1.35rem;
+  border-radius: 999px;
+  background: #1e3a8a;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(30, 58, 138, 0.18);
+}
+
+.primary-project-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(30, 58, 138, 0.24);
+}
+
+.external-reference-links {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.reference-list {
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.reference-list p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #475569;
+}
+
+.reference-list em {
+  color: #334155;
+}
