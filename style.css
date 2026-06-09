@@ -1250,3 +1250,11 @@ mark {
 .reference-list em {
   color: #334155;
 }
+
+.project-content p .text-link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  font-weight: 700;
+}
