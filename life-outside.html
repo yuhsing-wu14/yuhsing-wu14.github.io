@@ -73,11 +73,106 @@
     }
 
     .life-hero {
-      padding: 90px 8% 65px;
+      padding: 90px 8% 80px;
       background:
-        radial-gradient(circle at top left, rgba(22, 142, 216, 0.12), transparent 34%),
-        linear-gradient(135deg, #ffffff 0%, #f5fbff 55%, #eef8ff 100%);
+        radial-gradient(circle at 18% 20%, rgba(196, 229, 246, 0.45), transparent 30%),
+        radial-gradient(circle at 82% 68%, rgba(248, 211, 218, 0.42), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f5fbff 58%, #fff4f6 100%);
+    }
+    
+    .life-hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+    }
+    
+    .life-hero-text {
+      text-align: left;
+    }
+    
+    .life-hero-text h1 {
+      font-size: clamp(3.6rem, 6vw, 6.4rem);
+      line-height: 1;
+      margin: 0 0 24px;
+      color: var(--dark);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+    
+    .life-hero-text h2 {
+      color: #20395c;
+      font-size: 1.7rem;
+      margin: 0 0 22px;
+    }
+    
+    .life-hero-text p {
+      max-width: 650px;
+      margin: 0 0 20px;
+      font-size: 19px;
+      color: #334155;
+    }
+    
+    .life-hero-photo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .life-hero-photo::before {
+      content: "";
+      position: absolute;
+      width: 82%;
+      height: 82%;
+      left: 2%;
+      top: 8%;
+      background: rgba(196, 229, 246, 0.48);
+      border-radius: 42% 58% 55% 45%;
+      z-index: 0;
+    }
+    
+    .life-hero-photo::after {
+      content: "";
+      position: absolute;
+      width: 68%;
+      height: 68%;
+      right: 0;
+      bottom: 2%;
+      background: rgba(248, 211, 218, 0.5);
+      border-radius: 58% 42% 45% 55%;
+      z-index: 0;
+    }
+    
+    .life-hero-photo img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 410px;
+      height: 490px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border: 12px solid #ffffff;
+      border-radius: 30px;
+      box-shadow: 0 20px 46px rgba(15, 23, 42, 0.16);
+      transform: rotate(-2deg);
+    }
+    
+    .life-section-subtitle {
+      max-width: 1080px;
+      margin: 55px auto 20px;
+      padding: 0 24px;
       text-align: center;
+    }
+    
+    .life-section-subtitle p {
+      margin: 0;
+      color: var(--blue);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     .section-label {
@@ -196,17 +291,44 @@
     }
 
     @media (max-width: 900px) {
+      .life-hero {
+        padding: 70px 24px 65px;
+      }
+    
+      .life-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+    
+      .life-hero-text {
+        text-align: center;
+      }
+    
+      .life-hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .life-hero-photo img {
+        max-width: 350px;
+        height: 420px;
+      }
+    
+      .life-section-subtitle {
+        margin: 42px auto 10px;
+      }
+    
+      .life-section-subtitle p {
+        font-size: 1.35rem;
+      }
+    
       .photo-grid,
       .photo-grid.four {
         grid-template-columns: repeat(2, 1fr);
       }
-
+    
       h1 {
         font-size: 42px;
-      }
-
-      .life-hero p {
-        font-size: 18px;
       }
     }
 
@@ -254,26 +376,38 @@
       <a href="resume.pdf" target="_blank">Resume</a>
     </div>
   </nav>
-
+  
   <header class="life-hero">
-    <p class="section-label">Beyond the Portfolio</p>
-    <h1>Life Outside the Screen</h1>
-
-    <p><strong>Nice to meet you!</strong></p>
-
-    <p>
-      I am originally from Taiwan and completed my Bachelor’s degree at The University
-      of Texas at Austin. Hook ’em 🤘
-    </p>
-
-    <p>
-      Outside of my academic and design work, I enjoy exploring new places, discovering
-      matcha spots, staying active, and listening to music. This page is a small glimpse
-      into the people, places, and routines that keep me curious, grounded, and energized.
-    </p>
-
-    <a class="button" href="index.html">Back to Portfolio</a>
+    <div class="life-hero-inner">
+      <div class="life-hero-text">
+        <p class="section-label">Beyond the Portfolio</p>
+        <h1>Life Outside the Screen</h1>
+  
+        <h2>Nice to meet you!</h2>
+  
+        <p>
+          I am originally from Taiwan and completed my Bachelor’s degree at The University
+          of Texas at Austin. Hook ’em 🤘
+        </p>
+  
+        <p>
+          Outside of my academic and design work, I enjoy exploring new places, discovering
+          matcha spots, staying active, and listening to music. This page is a small glimpse
+          into the people, places, and routines that keep me curious, grounded, and energized.
+        </p>
+  
+        <a class="button" href="index.html">Back to Portfolio</a>
+      </div>
+  
+      <div class="life-hero-photo">
+        <img src="profile.JPG" alt="Professional portrait of Yuhsing Wu" />
+      </div>
+    </div>
   </header>
+  
+  <div class="life-section-subtitle">
+    <p>my life beyond design</p>
+  </div>
 
   <section>
     <div class="photo-grid">
