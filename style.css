@@ -58,17 +58,18 @@ body {
   color: var(--blue);
 }
 
+
 .hero {
-  min-height: 78vh;
-  padding: 95px 8% 90px;
+  min-height: 70vh;
+  padding: 75px 8% 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background:
-    radial-gradient(circle at 15% 20%, rgba(22, 142, 216, 0.16), transparent 28%),
-    radial-gradient(circle at 85% 72%, rgba(177, 156, 217, 0.28), transparent 32%),
-    linear-gradient(180deg, #f7fbff 0%, #eef8ff 55%, #f8f1ff 100%);
+    radial-gradient(circle at 18% 20%, rgba(187, 224, 245, 0.55), transparent 30%),
+    radial-gradient(circle at 82% 65%, rgba(247, 210, 214, 0.55), transparent 34%),
+    linear-gradient(180deg, #f7fbff 0%, #eef8ff 52%, #fff4f6 100%);
   position: relative;
   overflow: hidden;
 }
@@ -77,10 +78,10 @@ body {
   content: "";
   position: absolute;
   width: 125%;
-  height: 260px;
+  height: 220px;
   left: -12%;
-  bottom: -115px;
-  background: rgba(205, 190, 242, 0.34);
+  bottom: -105px;
+  background: rgba(248, 211, 218, 0.42);
   border-radius: 50% 50% 0 0;
   transform: rotate(-3deg);
 }
@@ -89,10 +90,10 @@ body {
   content: "";
   position: absolute;
   width: 115%;
-  height: 220px;
+  height: 200px;
   left: -7%;
-  bottom: -130px;
-  background: rgba(194, 226, 255, 0.36);
+  bottom: -125px;
+  background: rgba(196, 229, 246, 0.42);
   border-radius: 50% 50% 0 0;
   transform: rotate(4deg);
 }
@@ -115,24 +116,24 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(4.6rem, 9vw, 8.2rem);
+  font-size: clamp(4.2rem, 8vw, 7rem);
   line-height: 0.95;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
   color: var(--dark);
   font-weight: 800;
   letter-spacing: -0.04em;
 }
 
 .hero p {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  max-width: 850px;
+  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+  max-width: 820px;
   color: #334155;
   margin: 0 auto;
   line-height: 1.55;
 }
 
 .hero-buttons {
-  margin-top: 36px;
+  margin-top: 32px;
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -706,8 +707,8 @@ mark {
   }
 
   .hero {
-  min-height: 70vh;
-  padding: 72px 24px 80px;
+  min-height: 64vh;
+  padding: 64px 24px 72px;
 }
 
 .hero-text {
@@ -715,7 +716,7 @@ mark {
 }
 
 .hero h1 {
-  font-size: clamp(3.2rem, 16vw, 5.2rem);
+  font-size: clamp(3rem, 14vw, 4.8rem);
 }
 
 .hero p {
