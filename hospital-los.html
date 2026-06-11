@@ -109,6 +109,29 @@
           contributed to the prediction?</strong>
         </p>
 
+        <h3>Background Evidence</h3>
+        <p>
+          Hospital length-of-stay prediction can support healthcare planning because earlier LOS estimates may help
+          teams think through <strong>resource allocation, capacity, and care coordination</strong>. In this project,
+          LOS prediction was treated as a planning-support problem rather than a replacement for clinical judgment.
+          <sup><a href="#los-ref-1">[1]</a></sup>
+        </p>
+
+        <p>
+          The project also connects to discharge planning and care-transition needs. AHRQ emphasizes that safe hospital
+          discharge requires effective transfer of information among clinicians, patients, and families to reduce adverse
+          events and prevent readmissions. This shaped the design focus on clear outputs, simple explanations, and information
+          that could support planning conversations.
+          <sup><a href="#los-ref-2">[2]</a></sup>
+        </p>
+
+        <p>
+          Because machine learning tools can be difficult to trust when outputs are unclear, the dashboard prioritized
+          <strong>interpretability and explainability</strong>. The prototype shows the predicted LOS category, model
+          confidence, and top contributing features so users can understand the output instead of seeing a prediction alone.
+          <sup><a href="#los-ref-3">[3]</a></sup>
+        </p>
+
         <h3>Users / Stakeholders</h3>
         <p>
           The tool was designed for potential healthcare stakeholders such as <strong>clinicians, care teams,
@@ -135,6 +158,54 @@
           evaluation performance while still supporting feature-importance explanations.
         </p>
 
+        <h3>User Flow</h3>
+        <p>
+          The prototype was organized around a simple decision-support workflow. The goal was to help users move from
+          patient inputs to prediction interpretation without needing to understand the full machine learning pipeline.
+        </p>
+
+        <div class="mindful-flow-sequence" aria-label="Hospital length of stay user flow">
+          <div class="flow-sequence-step">
+            <span class="flow-phase-label">Input</span>
+            <div class="flow-step-card">Enter Patient Information</div>
+          </div>
+
+          <div class="flow-sequence-arrow">→</div>
+
+          <div class="flow-sequence-step">
+            <span class="flow-phase-label">Model</span>
+            <div class="flow-step-card">Run Prediction</div>
+          </div>
+
+          <div class="flow-sequence-arrow">→</div>
+
+          <div class="flow-sequence-step">
+            <span class="flow-phase-label">Output</span>
+            <div class="flow-step-card">Review LOS Category</div>
+          </div>
+
+          <div class="flow-sequence-arrow">→</div>
+
+          <div class="flow-sequence-step">
+            <span class="flow-phase-label">Uncertainty</span>
+            <div class="flow-step-card">Check Confidence</div>
+          </div>
+
+          <div class="flow-sequence-arrow">→</div>
+
+          <div class="flow-sequence-step">
+            <span class="flow-phase-label">Explanation</span>
+            <div class="flow-step-card">Review Key Factors</div>
+          </div>
+
+          <div class="flow-sequence-arrow">→</div>
+
+          <div class="flow-sequence-step">
+            <span class="flow-phase-label">Planning</span>
+            <div class="flow-step-card">Use Output for Planning</div>
+          </div>
+        </div>
+
         <h3>Process</h3>
         <p>
           The project followed a simple decision-support workflow:
@@ -147,6 +218,46 @@
           early interactive prototype, and ending with a more refined dashboard. Each stage focused on improving
           <strong>clarity, interpretability, and reduced cognitive load.</strong>
         </p>
+
+        <h3>Key Design Decisions</h3>
+
+        <div class="design-decision-grid">
+          <div class="design-decision-card">
+            <p class="decision-number">01</p>
+            <h4>Predict LOS as a category instead of exact days</h4>
+            <p>
+              The model output was shown as a length-of-stay category to make the result easier to interpret
+              and avoid presenting the prediction as more precise than it really is.
+            </p>
+          </div>
+
+          <div class="design-decision-card">
+            <p class="decision-number">02</p>
+            <h4>Show confidence with the prediction</h4>
+            <p>
+              Confidence output helps users understand uncertainty and avoid treating the model result as an
+              absolute answer.
+            </p>
+          </div>
+
+          <div class="design-decision-card">
+            <p class="decision-number">03</p>
+            <h4>Include top important features</h4>
+            <p>
+              Feature-importance information supports transparency by showing which patient or admission-related
+              factors contributed most to the prediction.
+            </p>
+          </div>
+
+          <div class="design-decision-card">
+            <p class="decision-number">04</p>
+            <h4>Use a simple dashboard layout</h4>
+            <p>
+              The final layout separates patient inputs, prediction output, confidence, and explanation to reduce
+              cognitive load and support quicker review.
+            </p>
+          </div>
+        </div>
 
         <h3>Prototype Development</h3>
         <p>
@@ -162,7 +273,6 @@
         </p>
 
         <div id="los-gallery">
-        
           <div class="los-rough-row">
             <figure class="los-rough-card">
               <img src="./assets/images/los/los-rough-sketch-1.png" alt="First rough sketch of hospital length of stay predictor">
@@ -193,7 +303,6 @@
               confidence score, top important features, and human-centered design elements.
             </figcaption>
           </figure>
-        
         </div>
 
         <h3>Key Findings / Outcome / Impact</h3>
@@ -214,7 +323,6 @@
         </p>
 
         <div class="los-results-gallery">
-
           <figure class="los-result-card">
             <img src="./assets/images/los/los-result 1.png" alt="Length of stay by admission type chart">
             <figcaption>
@@ -238,7 +346,6 @@
               admission type, severity of illness, and age as important factors contributing to LOS prediction.
             </figcaption>
           </figure>
-
         </div>
 
         <h3>Reflection / Next Steps</h3>
@@ -255,23 +362,53 @@
           accessibility, and exploring more advanced explainability methods.
         </p>
 
-        <h3>Links</h3>
-        <p>
-          <a class="project-link" href="https://huggingface.co/spaces/purupatel20/hospital-los-predictor" target="_blank">
-            Initial Prototype →
-          </a>
-        </p>
+        <h3>References / Links</h3>
 
-        <p>
-          <a class="project-link" href="https://huggingface.co/spaces/purupatel20/HospitalLOSPredictor" target="_blank">
-            Updated Prototype →
+        <div class="project-links-list">
+          <a
+            class="primary-project-link"
+            href="https://huggingface.co/spaces/purupatel20/HospitalLOSPredictor"
+            target="_blank"
+          >
+            View Updated Prototype →
           </a>
-        </p>
 
-        <p class="project-note">
-          Note: Prototype hosted externally on Hugging Face Spaces by a project teammate. Screenshots are included here
-          to preserve the design process and final interface.
-        </p>
+          <div class="external-reference-links">
+            <a
+              class="text-link"
+              href="https://huggingface.co/spaces/purupatel20/hospital-los-predictor"
+              target="_blank"
+            >
+              Initial Prototype →
+            </a>
+          </div>
+
+          <p class="project-note">
+            Note: Prototype hosted externally on Hugging Face Spaces by a project teammate. Screenshots are included here
+            to preserve the design process and final interface.
+          </p>
+
+          <div class="reference-list">
+            <p id="los-ref-1">
+              [1] Hansen, E. R., Nielsen, T. D., Mulvad, T., Strausholm, M. N., Sagi, T., & Hose, K.
+              (2023). Hospitalization length of stay prediction using patient event sequences.
+              <a class="text-link" href="https://arxiv.org/abs/2303.11042" target="_blank">Source</a>
+            </p>
+
+            <p id="los-ref-2">
+              [2] Agency for Healthcare Research and Quality. Care transitions from hospital to home:
+              IDEAL discharge planning.
+              <a class="text-link" href="https://www.ahrq.gov/patient-safety/patients-families/engagingfamilies/strategy4/index.html" target="_blank">Source</a>
+            </p>
+
+            <p id="los-ref-3">
+              [3] Amann, J., Blasimme, A., Vayena, E., Frey, D., & Madai, V. I. (2020).
+              Explainability for artificial intelligence in healthcare: A multidisciplinary perspective.
+              <em>BMC Medical Informatics and Decision Making, 20</em>, 310.
+              <a class="text-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9931364/" target="_blank">Source</a>
+            </p>
+          </div>
+        </div>
         
       </div>
     </article>
