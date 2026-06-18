@@ -1652,3 +1652,30 @@ mark {
 .design-decision-card h4 {
   color: #1e3a8a;
 }
+
+.role-card {
+  margin: 1.25rem 0 2.5rem;
+  padding: 1.5rem;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+.role-card p {
+  margin-bottom: 1rem;
+}
+
+.role-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.role-card li {
+  margin-bottom: 0.65rem;
+  line-height: 1.6;
+}
+
+.role-card li:last-child {
+  margin-bottom: 0;
+}
