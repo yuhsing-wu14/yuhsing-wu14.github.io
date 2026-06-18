@@ -67,6 +67,7 @@
       
       <div class="project-content">
         <h3>Intro</h3>
+
         <p>
           Hospital length of stay impacts <strong>patient outcomes, discharge planning, hospital capacity,
           staffing, and cost.</strong> However, many prediction tools are difficult to interpret or are not
@@ -81,6 +82,7 @@
         </p>
 
         <h3>Skills</h3>
+
         <p>
           <strong>Machine Learning</strong>, Human Factors Engineering, Health Technology, Python, Streamlit,
           Gradio, scikit-learn, Data Preprocessing, Model Evaluation, Feature Importance, Usability Analysis,
@@ -88,15 +90,39 @@
         </p>
 
         <h3>My Role</h3>
-        <p>
-          As part of the Hospital Length of Stay project team, I contributed through
-          <strong>UI design, user-centered research, model evaluation, results analysis, and presentation development.</strong>
-          My work focused on translating clinical workflow needs into a clearer dashboard structure, reviewing usability
-          and interpretability considerations, comparing Decision Tree and Random Forest performance, documenting evaluation
-          metrics, and identifying model limitations and edge cases.
-        </p>
+
+        <div class="role-card">
+          <p>
+            As part of the Hospital Length of Stay project team, I contributed across
+            <strong>UI design, user-centered research, model evaluation, results analysis,
+            and presentation development</strong>.
+          </p>
+
+          <ul>
+            <li>
+              Translated clinical workflow needs into a clearer dashboard structure focused on
+              prediction, confidence, and explanation.
+            </li>
+
+            <li>
+              Reviewed usability and interpretability considerations to make the model output
+              easier to understand in a planning context.
+            </li>
+
+            <li>
+              Compared <strong>Decision Tree and Random Forest</strong> performance using model
+              evaluation metrics and documented model limitations.
+            </li>
+
+            <li>
+              Contributed to results analysis, chart interpretation, and presentation materials
+              that explained the human-centered value of the dashboard.
+            </li>
+          </ul>
+        </div>
 
         <h3>Problem</h3>
+
         <p>
           Hospitals and care teams often need to estimate how long a patient may stay in the hospital to support
           <strong>resource planning, discharge coordination, and care management.</strong> Existing LOS prediction
@@ -109,7 +135,14 @@
           contributed to the prediction?</strong>
         </p>
 
+        <div class="case-study-callout design-question-callout">
+          <strong>Design question:</strong> How might we make hospital length-of-stay predictions easier
+          to interpret by showing not only the predicted stay category, but also confidence and key
+          factors that contributed to the result?
+        </div>
+
         <h3>Background Evidence</h3>
+
         <p>
           Hospital length-of-stay prediction can support healthcare planning because earlier LOS estimates may help
           teams think through <strong>resource allocation, capacity, and care coordination</strong>. In this project,
@@ -132,7 +165,95 @@
           <sup><a href="#los-ref-3">[3]</a></sup>
         </p>
 
+        <h3>Dashboard User Needs</h3>
+
+        <p>
+          To make the predictive model more useful in a healthcare planning context, we translated
+          the problem into four dashboard needs focused on clarity, uncertainty, transparency, and
+          planning support.
+        </p>
+
+        <div class="user-needs-grid">
+          <div class="user-need-card">
+            <p class="need-number">01</p>
+            <h4>Quickly understand the prediction</h4>
+            <p>
+              Users need a clear LOS category without sorting through raw model output or complex
+              probability tables.
+            </p>
+          </div>
+
+          <div class="user-need-card">
+            <p class="need-number">02</p>
+            <h4>Understand uncertainty</h4>
+            <p>
+              Users need confidence information so the prediction is not treated as an absolute
+              answer.
+            </p>
+          </div>
+
+          <div class="user-need-card">
+            <p class="need-number">03</p>
+            <h4>See why the model predicted that result</h4>
+            <p>
+              Users need top contributing features to make the model output more transparent and
+              easier to review.
+            </p>
+          </div>
+
+          <div class="user-need-card">
+            <p class="need-number">04</p>
+            <h4>Use the output for planning</h4>
+            <p>
+              Users need information that can support resource planning, discharge coordination,
+              and care conversations.
+            </p>
+          </div>
+        </div>
+
+        <h3>From Model Output to Human-Centered Dashboard</h3>
+
+        <p>
+          A key design goal was to move beyond a model-focused output and create a dashboard that
+          helps users interpret the prediction quickly and responsibly.
+        </p>
+
+        <div class="simplify-comparison">
+          <div class="simplify-column simplify-before">
+            <p class="simplify-label">Model-focused output</p>
+            <h4>Harder to interpret quickly</h4>
+            <ul>
+              <li>Raw prediction class or probability</li>
+              <li>Feature weights without explanation</li>
+              <li>Metrics shown without workflow context</li>
+              <li>Limited support for uncertainty</li>
+              <li>Harder for non-technical users to review</li>
+            </ul>
+          </div>
+
+          <div class="simplify-arrow">→</div>
+
+          <div class="simplify-column simplify-after">
+            <p class="simplify-label">Human-centered dashboard</p>
+            <h4>Prediction becomes easier to use</h4>
+            <ul>
+              <li>Clear LOS category</li>
+              <li>Confidence score</li>
+              <li>Top important features</li>
+              <li>Supporting visualizations</li>
+              <li>Simple input, prediction, and explanation layout</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-study-callout">
+          <strong>Main design idea:</strong> The dashboard does not just predict length of stay.
+          It translates model output into a clearer decision-support format that users can review,
+          question, and use for planning.
+        </div>
+
         <h3>Users / Stakeholders</h3>
+
         <p>
           The tool was designed for potential healthcare stakeholders such as <strong>clinicians, care teams,
           hospital administrators, care coordinators, and hospital staff.</strong> These users need quick,
@@ -145,20 +266,60 @@
         </p>
 
         <h3>Research & Design Methods</h3>
-        <p>
-          The project used the AV Healthcare Analytics II dataset and framed length of stay as a
-          <strong>classification problem.</strong> Instead of predicting an exact number of days, the model predicted
-          a stay category, which made the output easier to interpret in a healthcare decision-making context.
-        </p>
 
         <p>
-          The team cleaned and encoded the dataset, selected interpretable patient and admission-related features,
-          and compared <strong>Decision Tree and Random Forest models</strong> using accuracy, precision, recall,
-          and ROC-AUC. The final prototype used a Random Forest model because it provided slightly stronger
-          evaluation performance while still supporting feature-importance explanations.
+          The project followed a human-centered machine learning workflow, moving from dataset
+          preparation and model comparison to dashboard design and explainability.
         </p>
+
+        <div class="method-flow-grid">
+          <div class="method-flow-card">
+            <p class="method-step-number">01</p>
+            <h4>Prepare Dataset</h4>
+            <p>
+              Cleaned and encoded the AV Healthcare Analytics II dataset for model development.
+            </p>
+          </div>
+
+          <div class="method-flow-card">
+            <p class="method-step-number">02</p>
+            <h4>Frame Prediction</h4>
+            <p>
+              Treated LOS as a classification problem so the output could be shown as a stay
+              category instead of exact days.
+            </p>
+          </div>
+
+          <div class="method-flow-card">
+            <p class="method-step-number">03</p>
+            <h4>Compare Models</h4>
+            <p>
+              Compared Decision Tree and Random Forest models using accuracy, precision, recall,
+              and ROC-AUC.
+            </p>
+          </div>
+
+          <div class="method-flow-card">
+            <p class="method-step-number">04</p>
+            <h4>Explain Output</h4>
+            <p>
+              Used feature importance to help users understand which factors contributed most to
+              the prediction.
+            </p>
+          </div>
+
+          <div class="method-flow-card">
+            <p class="method-step-number">05</p>
+            <h4>Design Dashboard</h4>
+            <p>
+              Built a dashboard around input, prediction, confidence, and explanation to reduce
+              interpretation effort.
+            </p>
+          </div>
+        </div>
 
         <h3>User Flow</h3>
+
         <p>
           The prototype was organized around a simple decision-support workflow. The goal was to help users move from
           patient inputs to prediction interpretation without needing to understand the full machine learning pipeline.
@@ -207,6 +368,7 @@
         </div>
 
         <h3>Process</h3>
+
         <p>
           The project followed a simple decision-support workflow:
           <strong>input → prediction → explanation.</strong> A small set of interpretable features was selected,
@@ -218,6 +380,15 @@
           early interactive prototype, and ending with a more refined dashboard. Each stage focused on improving
           <strong>clarity, interpretability, and reduced cognitive load.</strong>
         </p>
+
+        <div class="case-study-banner">
+          <p class="banner-label">From model output to design decisions</p>
+          <h3>Turning prediction results into interpretable dashboard features</h3>
+          <p>
+            Each dashboard element was selected to make the prediction easier to understand, explain, and use
+            within a healthcare planning context.
+          </p>
+        </div>
 
         <h3>Key Design Decisions</h3>
 
@@ -260,17 +431,46 @@
         </div>
 
         <h3>Prototype Development</h3>
+
         <p>
           The prototype evolved through <strong>multiple stages of design and refinement</strong>, beginning with
           a rough sketch, followed by a midpoint interactive prototype, and culminating in a more polished final
           dashboard.
         </p>
 
-        <p>
-          The rough sketch established the initial information hierarchy, the midpoint prototype introduced the
-          first functional workflow, and the final prototype refined the layout to better support
-          <strong>explanation, confidence, and usability.</strong>
-        </p>
+        <div class="case-study-banner">
+          <p class="banner-label">Prototype evolution</p>
+          <h3>From rough layout to interpretable dashboard</h3>
+          <p>
+            The interface evolved from an initial layout sketch into a functional prototype and then
+            into a clearer dashboard focused on readability, confidence, and explanation.
+          </p>
+        </div>
+
+        <div class="impact-card-grid">
+          <div class="impact-card">
+            <h4>01 Rough Sketch</h4>
+            <p>
+              Established the information hierarchy for patient inputs, prediction output, top factors,
+              and supporting charts.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <h4>02 Midpoint Prototype</h4>
+            <p>
+              Built the first functional workflow with input controls, prediction results, confidence,
+              and LOS distribution.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <h4>03 Final Prototype</h4>
+            <p>
+              Refined the layout to improve readability, reduce cognitive load, and support explanation.
+            </p>
+          </div>
+        </div>
 
         <p class="project-note">
           Click any prototype image below to open a larger view. This makes the design process and interface details
@@ -319,15 +519,41 @@
         </div>
 
         <h3>Key Findings / Outcome / Impact</h3>
-        <p>
-          The final prototype included a patient input form, LOS category prediction, confidence score, top
-          important features table, feature importance chart, and supporting LOS visualizations.
-        </p>
 
         <p>
-          The main outcome was a <strong>human-centered decision-support dashboard</strong> that connected model
-          output with explanation and visual context, rather than presenting a prediction alone.
+          The final prototype connected model output with explanation and visual context, rather than
+          presenting a prediction alone.
         </p>
+
+        <div class="impact-card-grid los-impact-grid">
+          <div class="impact-card">
+            <h4>Interpretable Prediction</h4>
+            <p>
+              Shows LOS as a category to make the result easier to understand in a planning context.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <h4>Uncertainty Communication</h4>
+            <p>
+              Includes confidence output to help users understand that predictions are not absolute.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <h4>Feature-Level Explanation</h4>
+            <p>
+              Displays top important features so users can review what influenced the model result.
+            </p>
+          </div>
+
+          <div class="impact-card">
+            <h4>Visual Context</h4>
+            <p>
+              Uses charts to connect the prediction with interpretable patterns in the dataset.
+            </p>
+          </div>
+        </div>
 
         <p>
           To support results analysis, the project also included visualizations that explored relationships between
@@ -371,19 +597,34 @@
           </figure>
         </div>
 
-        <h3>Reflection / Next Steps</h3>
-        <p>
-          This project showed how predictive modeling can be made more usable through <strong>clear information
-          hierarchy, confidence communication, and feature-level explanations.</strong> The strongest part of the
-          project was not only generating a prediction, but helping users understand uncertainty and key factors
-          behind the result.
-        </p>
+        <div class="case-study-callout">
+          <strong>Main takeaway:</strong> The value of this project was not only building a prediction
+          model, but designing the model output in a way that users could understand, question, and use
+          for planning.
+        </div>
 
-        <p>
-          Future improvements could include adding more clinically meaningful features, improving model tuning,
-          conducting usability testing with healthcare stakeholders, adding clearer chart captions, improving
-          accessibility, and exploring more advanced explainability methods.
-        </p>
+        <h3>Reflection / Next Steps</h3>
+
+        <div class="reflection-next-grid">
+          <div class="reflection-card">
+            <h4>Reflection</h4>
+            <p>
+              This project showed that predictive modeling becomes more useful when the interface
+              supports interpretation, uncertainty awareness, and workflow fit, not just model output.
+            </p>
+          </div>
+
+          <div class="reflection-card">
+            <h4>Next Steps</h4>
+            <ul>
+              <li>Add more clinically meaningful features</li>
+              <li>Improve model tuning and validation</li>
+              <li>Conduct usability testing with healthcare stakeholders</li>
+              <li>Improve chart captions and accessibility</li>
+              <li>Explore more advanced explainability methods</li>
+            </ul>
+          </div>
+        </div>
 
         <h3>References / Links</h3>
 
