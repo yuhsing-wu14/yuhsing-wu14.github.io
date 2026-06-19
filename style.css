@@ -1812,13 +1812,13 @@ mark {
   place-items: center;
   border: none;
   border-radius: 50%;
-  background: #1e3a8a;
+  background: #0F5AD2;
   color: #ffffff;
   font-family: inherit;
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-size: 1.4rem;
+  font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 12px 28px rgba(30, 58, 138, 0.22);
+  box-shadow: 0 12px 28px rgba(15, 90, 210, 0.24);
   transition:
     transform 0.2s ease,
     background-color 0.2s ease,
@@ -1827,13 +1827,14 @@ mark {
 
 .persona-arrow:hover {
   transform: translateY(-2px);
-  background: #172f72;
-  box-shadow: 0 16px 34px rgba(30, 58, 138, 0.3);
+  background: #104FC4;
+  box-shadow: 0 16px 34px rgba(15, 90, 210, 0.32);
 }
 
 .persona-arrow:active {
   transform: translateY(0);
 }
+
 
 .persona-arrow:focus-visible,
 .persona-dot:focus-visible {
@@ -1914,8 +1915,9 @@ mark {
 .persona-dot.active {
   width: 28px;
   border-radius: 999px;
-  background: #2f80ed;
+  background: #0F5AD2;
 }
+
 
 @keyframes personaFade {
   from {
