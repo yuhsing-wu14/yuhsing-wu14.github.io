@@ -1992,7 +1992,7 @@ mark {
   position: relative;
   padding: 1rem;
   background: #f8fbff;
-  border-bottom: 1px solid #e2e8f0;
+  border-top: 1px solid #e2e8f0;
 }
 
 .los-image-wrap a {
