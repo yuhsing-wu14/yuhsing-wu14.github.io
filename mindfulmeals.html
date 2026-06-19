@@ -442,14 +442,83 @@
           think through different needs, behaviors, and challenges within the target population.
         </p>
 
-        <div class="persona-gallery">
-          <figure class="persona-figure">
-            <img src="assets/images/MindfulMeals/MindfulMeals-persona-1.png" alt="Persona profile for Helen, a 62-year-old user living with mild cognitive impairment">
-          </figure>
-
-          <figure class="persona-figure">
-            <img src="assets/images/MindfulMeals/MindfulMeals-persona-2.png" alt="Persona profile for Marcus, a 52-year-old user experiencing early cognitive changes">
-          </figure>
+        <div class="persona-carousel" aria-label="MindfulMeals personas">
+          <div class="persona-carousel-header">
+            <div>
+              <p class="persona-carousel-label" id="persona-counter">Persona 1 of 2</p>
+              <h4 id="persona-name">Helen — Living with MCI</h4>
+            </div>
+        
+            <div class="persona-carousel-controls">
+              <button
+                class="persona-arrow"
+                id="persona-prev"
+                type="button"
+                aria-label="View previous persona"
+              >
+                ←
+              </button>
+        
+              <button
+                class="persona-arrow"
+                id="persona-next"
+                type="button"
+                aria-label="View next persona"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        
+          <div class="persona-slides">
+            <figure class="persona-slide active" data-name="Helen — Living with MCI">
+              <a
+                href="assets/images/MindfulMeals/MindfulMeals-persona-1.png"
+                target="_blank"
+                aria-label="Open Helen persona in a larger view"
+              >
+                <img
+                  src="assets/images/MindfulMeals/MindfulMeals-persona-1.png"
+                  alt="Persona profile for Helen, a 62-year-old user living with mild cognitive impairment"
+                >
+              </a>
+            </figure>
+        
+            <figure class="persona-slide" data-name="Marcus — Early Cognitive Changes">
+              <a
+                href="assets/images/MindfulMeals/MindfulMeals-persona-2.png"
+                target="_blank"
+                aria-label="Open Marcus persona in a larger view"
+              >
+                <img
+                  src="assets/images/MindfulMeals/MindfulMeals-persona-2.png"
+                  alt="Persona profile for Marcus, a 52-year-old user experiencing early cognitive changes"
+                >
+              </a>
+            </figure>
+          </div>
+        
+          <div class="persona-carousel-footer">
+            <div class="persona-dots" aria-label="Choose a persona">
+              <button
+                class="persona-dot active"
+                type="button"
+                data-slide="0"
+                aria-label="View Helen persona"
+                aria-current="true"
+              ></button>
+        
+              <button
+                class="persona-dot"
+                type="button"
+                data-slide="1"
+                aria-label="View Marcus persona"
+                aria-current="false"
+              ></button>
+            </div>
+        
+            <p>Use the arrows to explore each persona. Click the image to open a larger view.</p>
+          </div>
         </div>
 
         <p>
@@ -884,5 +953,93 @@
   <footer>
     <p>© 2026 Yuhsing Wu.</p>
   </footer>
-</body>
-</html>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const slides = document.querySelectorAll(".persona-slide");
+      const dots = document.querySelectorAll(".persona-dot");
+      const previousButton = document.getElementById("persona-prev");
+      const nextButton = document.getElementById("persona-next");
+      const counter = document.getElementById("persona-counter");
+      const name = document.getElementById("persona-name");
+  
+      if (
+        !slides.length ||
+        !previousButton ||
+        !nextButton ||
+        !counter ||
+        !name
+      ) {
+        return;
+      }
+  
+      let currentSlide = 0;
+  
+      function showSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+  
+        slides.forEach(function (slide, slideIndex) {
+          const isActive = slideIndex === currentSlide;
+  
+          slide.classList.toggle("active", isActive);
+          slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+        });
+  
+        dots.forEach(function (dot, dotIndex) {
+          const isActive = dotIndex === currentSlide;
+  
+          dot.classList.toggle("active", isActive);
+          dot.setAttribute("aria-current", isActive ? "true" : "false");
+        });
+  
+        counter.textContent =
+          "Persona " + (currentSlide + 1) + " of " + slides.length;
+  
+        name.textContent = slides[currentSlide].dataset.name;
+      }
+  
+      previousButton.addEventListener("click", function () {
+        showSlide(currentSlide - 1);
+      });
+  
+      nextButton.addEventListener("click", function () {
+        showSlide(currentSlide + 1);
+      });
+  
+      dots.forEach(function (dot) {
+        dot.addEventListener("click", function () {
+          showSlide(Number(dot.dataset.slide));
+        });
+      });
+  
+      document.addEventListener("keydown", function (event) {
+        const carousel = document.querySelector(".persona-carousel");
+  
+        if (!carousel) {
+          return;
+        }
+  
+        const carouselPosition = carousel.getBoundingClientRect();
+        const carouselIsVisible =
+          carouselPosition.top < window.innerHeight &&
+          carouselPosition.bottom > 0;
+  
+        if (!carouselIsVisible) {
+          return;
+        }
+  
+        if (event.key === "ArrowLeft") {
+          showSlide(currentSlide - 1);
+        }
+  
+        if (event.key === "ArrowRight") {
+          showSlide(currentSlide + 1);
+        }
+      });
+  
+      showSlide(0);
+    });
+  </script>
+  
+  </body>
+  </html>
