@@ -1810,27 +1810,29 @@ mark {
   height: 48px;
   display: grid;
   place-items: center;
-  border: 1px solid #bfdbfe;
+  border: none;
   border-radius: 50%;
-  background: #ffffff;
-  color: #1e3a8a;
+  background: #1e3a8a;
+  color: #ffffff;
   font-family: inherit;
   font-size: 1.35rem;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.1);
+  box-shadow: 0 12px 28px rgba(30, 58, 138, 0.22);
   transition:
     transform 0.2s ease,
     background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+    box-shadow 0.2s ease;
 }
 
 .persona-arrow:hover {
   transform: translateY(-2px);
-  border-color: #2f80ed;
-  background: #2f80ed;
-  color: #ffffff;
+  background: #172f72;
+  box-shadow: 0 16px 34px rgba(30, 58, 138, 0.3);
+}
+
+.persona-arrow:active {
+  transform: translateY(0);
 }
 
 .persona-arrow:focus-visible,
