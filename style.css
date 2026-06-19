@@ -1960,3 +1960,130 @@ mark {
     text-align: left;
   }
 }
+
+
+/* LOS prototype development gallery */
+
+#los-gallery {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  margin: 2rem 0 3rem;
+}
+
+#los-gallery figure {
+  margin: 0;
+}
+
+.los-gallery-intro {
+  margin-bottom: 1.25rem;
+}
+
+/* Full prototype card */
+.los-prototype-card {
+  overflow: hidden;
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
+}
+
+/* Image area */
+.los-image-wrap {
+  position: relative;
+  padding: 1rem;
+  background: #f8fbff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.los-image-wrap a {
+  display: block;
+}
+
+.los-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #ffffff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Make the combined rough-sketch image slightly taller */
+#los-gallery .los-prototype-card:first-child .los-image-wrap img {
+  height: 460px;
+}
+
+.los-image-wrap a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.1);
+}
+
+/* Open larger badge */
+.los-enlarge-badge {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.75rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: #1e3a8a;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.22);
+  pointer-events: none;
+}
+
+/* Caption card */
+.los-prototype-caption {
+  padding: 1.35rem 1.5rem 1.5rem;
+  background: linear-gradient(135deg, #f4f9ff 0%, #ffffff 100%);
+}
+
+.los-caption-stage {
+  margin: 0 0 0.35rem !important;
+  color: #2f80ed !important;
+  font-size: 0.78rem !important;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.los-prototype-caption h4 {
+  margin: 0 0 0.55rem;
+  color: #1e3a8a;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.los-prototype-caption p:last-child {
+  margin: 0;
+  color: #475569;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+  .los-image-wrap img,
+  #los-gallery .los-prototype-card:first-child .los-image-wrap img {
+    height: auto;
+  }
+
+  .los-enlarge-badge {
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.72rem;
+  }
+
+  .los-prototype-caption {
+    padding: 1.15rem 1.2rem 1.3rem;
+  }
+}
+
